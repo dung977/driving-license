@@ -1,0 +1,2002 @@
+[
+  {
+    "id": 1,
+    "content": "Giấy phép lái xe hạng B2 cho phép người lái điều khiển loại xe nào dưới đây?",
+    "options": {
+      "A": "Xe ô tô chở người đến 9 chỗ ngồi (kể cả chỗ của người lái xe); xe ô tô tải, kể cả xe tải chuyên dùng có khối lượng hàng chuyên chở được phép tham gia giao thông dưới 3.500 kg; xe ô tô dùng cho người khuyết tật.",
+      "B": "Xe ô tô chở người trên 9 chỗ ngồi.",
+      "C": "Xe mô tô phân khối lớn trên 175 cm³."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 2,
+    "content": "Người lái xe hạng B2 được phép lái xe ô tô tải có khối lượng hàng chuyên chở tối đa là bao nhiêu?",
+    "options": {
+      "A": "Dưới 3.500 kg.",
+      "B": "Dưới 5.000 kg.",
+      "C": "Dưới 7.500 kg."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 3,
+    "content": "Người có giấy phép lái xe hạng B2 muốn nâng hạng lên C phải đáp ứng điều kiện gì?",
+    "options": {
+      "A": "Chỉ cần thi lại lý thuyết.",
+      "B": "Đã có giấy phép lái xe hạng B2 đủ 03 năm và có đủ 12 điểm trong 03 năm liên tiếp.",
+      "C": "Đã có giấy phép lái xe hạng B2 đủ 01 năm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 4,
+    "content": "Tốc độ tối đa khi xe ô tô con chạy trên đường cao tốc loại 1 (đường cao tốc có 4 làn xe trở lên, phần đường xe chạy đủ rộng) là bao nhiêu km/h?",
+    "options": {
+      "A": "100 km/h.",
+      "B": "120 km/h.",
+      "C": "110 km/h."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 5,
+    "content": "Xe ô tô khi đi trên đường cao tốc, khoảng cách an toàn tối thiểu giữa hai xe phải là bao nhiêu khi vận tốc từ 100 km/h đến 120 km/h?",
+    "options": {
+      "A": "50 mét.",
+      "B": "70 mét.",
+      "C": "Theo biển báo khoảng cách an toàn trên đường cao tốc."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 6,
+    "content": "Khi lái xe ô tô trên đường cao tốc, người lái xe không được phép làm điều gì?",
+    "options": {
+      "A": "Đi với tốc độ ổn định trên làn đường bên phải.",
+      "B": "Quay đầu xe, lùi xe hoặc vượt qua dải phân cách giữa.",
+      "C": "Chuyển làn đường khi có tín hiệu."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 7,
+    "content": "Tốc độ tối thiểu trên đường cao tốc đối với xe ô tô là bao nhiêu km/h?",
+    "options": {
+      "A": "60 km/h.",
+      "B": "80 km/h.",
+      "C": "Theo biển báo quy định tốc độ tối thiểu trên tuyến đường đó."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 8,
+    "content": "Khi xe ô tô bị nổ lốp khi đang chạy ở tốc độ cao, người lái xe phải xử lý như thế nào?",
+    "options": {
+      "A": "Đạp phanh mạnh để dừng xe ngay lập tức.",
+      "B": "Giữ chắc vô lăng, không đạp phanh đột ngột, giảm tốc độ từ từ và đưa xe vào lề đường.",
+      "C": "Tăng ga để duy trì tốc độ và lái thẳng."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 9,
+    "content": "Trên đường có nhiều làn xe, xe ô tô khi muốn chuyển làn đường phải thực hiện như thế nào?",
+    "options": {
+      "A": "Bật đèn xi nhan và chuyển ngay khi thấy có khoảng trống.",
+      "B": "Quan sát gương chiếu hậu, bật đèn xi nhan, quan sát và chuyển làn từ từ khi an toàn.",
+      "C": "Bấm còi để thông báo rồi chuyển làn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 10,
+    "content": "Khi điều khiển xe ô tô trên đường trơn, ướt, người lái xe phải làm gì để đảm bảo an toàn?",
+    "options": {
+      "A": "Giảm tốc độ, tăng khoảng cách an toàn với xe trước, tránh phanh đột ngột.",
+      "B": "Tăng tốc để nhanh chóng qua đoạn đường trơn.",
+      "C": "Chuyển sang làn đường bên trái để đi nhanh hơn."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 11,
+    "content": "Khi lái xe ô tô đổ đèo, người lái xe cần lưu ý điều gì?",
+    "options": {
+      "A": "Tắt động cơ và thả trôi để tiết kiệm nhiên liệu.",
+      "B": "Sử dụng phanh liên tục để giảm tốc độ.",
+      "C": "Sử dụng số thấp để hãm tốc độ, hạn chế đạp phanh liên tục tránh cháy phanh."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 12,
+    "content": "Trường hợp nào người lái xe ô tô phải bật đèn chiếu xa?",
+    "options": {
+      "A": "Khi đi trong đường hầm.",
+      "B": "Khi đi trên đường ngoài khu dân cư ban đêm và không có xe ngược chiều.",
+      "C": "Khi trời có sương mù."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 13,
+    "content": "Khi gặp xe chạy ngược chiều, người lái xe đang bật đèn chiếu xa phải làm gì?",
+    "options": {
+      "A": "Tiếp tục bật đèn chiếu xa để nhìn rõ đường.",
+      "B": "Chuyển sang đèn chiếu gần khi còn cách xe ngược chiều khoảng 150 mét.",
+      "C": "Tắt đèn hoàn toàn để không làm chói mắt xe đối diện."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 14,
+    "content": "Người lái xe ô tô phải thắt dây an toàn trong trường hợp nào?",
+    "options": {
+      "A": "Chỉ khi đi trên đường cao tốc.",
+      "B": "Trong suốt quá trình tham gia giao thông, kể cả hành khách trên xe phải thắt dây an toàn.",
+      "C": "Khi đi với tốc độ trên 60 km/h."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 15,
+    "content": "Xe ô tô bị hỏng phanh khi đang lưu thông trên đường, người lái xe phải xử lý như thế nào?",
+    "options": {
+      "A": "Tắt động cơ ngay lập tức.",
+      "B": "Sử dụng phanh tay từ từ, chuyển số thấp hơn, kéo xe vào lề đường an toàn.",
+      "C": "Tăng tốc để thoát khỏi tình huống nguy hiểm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 16,
+    "content": "Khi đậu xe ô tô trên đường dốc (đường dốc lên phía trước xe), người lái xe phải làm gì để đảm bảo xe không tự trôi?",
+    "options": {
+      "A": "Chỉ cần kéo phanh tay là đủ.",
+      "B": "Kéo phanh tay, gài số 1 hoặc số lùi, chèn bánh xe.",
+      "C": "Tắt máy và khóa cửa xe."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 17,
+    "content": "Khi xe ô tô bị mất lái (trượt bánh), người lái xe cần xử lý thế nào?",
+    "options": {
+      "A": "Đánh lái mạnh về phía ngược lại chiều trượt.",
+      "B": "Nhả chân ga, không đạp phanh đột ngột, điều chỉnh vô lăng ngược chiều với hướng trượt bánh.",
+      "C": "Đạp phanh mạnh và giữ vô lăng thẳng."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 18,
+    "content": "Khoảng cách an toàn tối thiểu giữa hai xe ô tô khi đi với tốc độ 60 km/h trên đường bộ thông thường là bao nhiêu?",
+    "options": {
+      "A": "35 mét.",
+      "B": "50 mét.",
+      "C": "Theo biển báo hoặc quy định của cơ quan quản lý đường bộ tương ứng với điều kiện đường sá."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 19,
+    "content": "Trong trường hợp xe ô tô bốc cháy khi đang lưu thông, người lái xe cần làm gì đầu tiên?",
+    "options": {
+      "A": "Tiếp tục lái xe đến nơi an toàn rồi tắt máy.",
+      "B": "Đưa xe vào lề đường, tắt máy, thoát ra khỏi xe và gọi cứu hỏa.",
+      "C": "Mở nắp capô để kiểm tra nguồn lửa."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 20,
+    "content": "Khi điều khiển xe ô tô qua đường ngập nước, người lái xe cần lưu ý gì?",
+    "options": {
+      "A": "Tăng tốc để qua nhanh, tránh nước vào động cơ.",
+      "B": "Đi với tốc độ thấp, giữ đều ga, tránh để nước vào hệ thống phanh và động cơ.",
+      "C": "Đi ở giữa đường để tránh vùng nước sâu ở lề."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 21,
+    "content": "Xe ô tô khi dừng đỗ trên đường ban đêm hoặc khi có sương mù phải làm gì?",
+    "options": {
+      "A": "Tắt tất cả đèn để tiết kiệm điện.",
+      "B": "Bật đèn vị trí và đèn báo nguy hiểm (đèn khẩn cấp).",
+      "C": "Chỉ cần bật đèn pha để cảnh báo xe đi ngược chiều."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 22,
+    "content": "Khi lái xe ô tô vào cua, người lái xe phải thực hiện nguyên tắc gì?",
+    "options": {
+      "A": "Tăng tốc trước khi vào cua để duy trì quán tính.",
+      "B": "Giảm tốc độ trước khi vào cua, không giảm tốc đột ngột khi đang trong cua.",
+      "C": "Cắt cua sang làn đối diện để đi đường ngắn hơn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 23,
+    "content": "Trên đường cao tốc, khi xe ô tô gặp sự cố kỹ thuật bắt buộc phải dừng xe, người lái xe cần đặt biển cảnh báo ở khoảng cách tối thiểu bao nhiêu mét về phía sau xe?",
+    "options": {
+      "A": "50 mét.",
+      "B": "100 mét.",
+      "C": "150 mét."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 24,
+    "content": "Hệ thống chống bó cứng phanh (ABS) trên xe ô tô có tác dụng gì?",
+    "options": {
+      "A": "Giúp xe phanh nhanh hơn trong mọi trường hợp.",
+      "B": "Giúp bánh xe không bị bó cứng khi phanh gấp, giúp người lái vẫn có thể điều khiển được hướng xe.",
+      "C": "Tăng cường lực phanh khi đường trơn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 25,
+    "content": "Người lái xe ô tô cần kiểm tra gì trước khi khởi hành để đảm bảo an toàn?",
+    "options": {
+      "A": "Chỉ kiểm tra xăng và dầu nhớt.",
+      "B": "Kiểm tra áp suất lốp, đèn tín hiệu, gương chiếu hậu, phanh, và các thiết bị an toàn khác.",
+      "C": "Chỉ cần khởi động xe và kiểm tra âm thanh động cơ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 26,
+    "content": "Khi lái xe ô tô ban đêm gặp đèn pha từ xe ngược chiều chiếu thẳng vào mắt làm lóa mắt, người lái xe phải làm gì?",
+    "options": {
+      "A": "Bật đèn pha của mình lên để đáp trả.",
+      "B": "Giảm tốc độ, nhìn về phía trước bên phải của mình, chú ý lề đường và dừng lại nếu cần.",
+      "C": "Đóng mắt lại một lúc cho hết lóa rồi tiếp tục đi."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 27,
+    "content": "Xe ô tô con đi trên đường ngoài khu dân cư, đường không có dải phân cách, không có biển báo tốc độ thì tốc độ tối đa cho phép là bao nhiêu?",
+    "options": {
+      "A": "80 km/h.",
+      "B": "90 km/h.",
+      "C": "60 km/h."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 28,
+    "content": "Khi lái xe ô tô đi qua ngã tư có tín hiệu đèn giao thông đang bật xanh, người lái xe có phải chú ý gì không?",
+    "options": {
+      "A": "Không cần chú ý vì đèn xanh là được ưu tiên đi.",
+      "B": "Vẫn phải chú ý quan sát, đặc biệt chú ý xe chạy nhanh từ hướng khác và người đi bộ.",
+      "C": "Tăng tốc nhanh qua ngã tư để không cản đường xe khác."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 29,
+    "content": "Theo quy định, người lái xe ô tô không được sử dụng điện thoại di động khi đang lái xe trừ trường hợp nào?",
+    "options": {
+      "A": "Khi đang dừng chờ đèn đỏ.",
+      "B": "Khi sử dụng điện thoại lắp đặt cố định trên xe (loại không cầm tay).",
+      "C": "Khi đang đi trên đường thẳng ít xe."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 30,
+    "content": "Khi xe ô tô bị thủng lốp sau khi đang chạy với tốc độ cao, người lái xe không được làm điều gì?",
+    "options": {
+      "A": "Giữ chặt vô lăng.",
+      "B": "Đạp phanh đột ngột.",
+      "C": "Giảm tốc từ từ và đưa xe vào lề đường."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 31,
+    "content": "Khi lùi xe ô tô, người lái xe phải thực hiện như thế nào để đảm bảo an toàn?",
+    "options": {
+      "A": "Lùi nhanh để tiết kiệm thời gian.",
+      "B": "Quan sát kỹ phía sau, bật đèn lùi, và chú ý người và vật cản ở phía sau.",
+      "C": "Chỉ cần nhìn gương chiếu hậu là đủ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 32,
+    "content": "Khi điều khiển xe ô tô vượt xe khác, người lái xe phải đảm bảo những điều kiện nào?",
+    "options": {
+      "A": "Phải bật đèn xi nhan trái, đảm bảo không có xe ngược chiều, xe phía trước không tăng tốc, và an toàn sau khi vượt.",
+      "B": "Chỉ cần bật đèn xi nhan và vượt.",
+      "C": "Bấm còi và vượt khi đường rộng."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 33,
+    "content": "Khi lái xe ô tô qua cầu hẹp chỉ đủ một làn xe mà có xe ngược chiều, hai xe phải xử lý như thế nào?",
+    "options": {
+      "A": "Xe nào đến cầu trước được đi trước.",
+      "B": "Xe nào có kích thước lớn hơn được đi trước.",
+      "C": "Xe nào phía bên trong cầu (đã vào cầu trước) được đi tiếp, xe bên ngoài chờ."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 34,
+    "content": "Khi lái xe ô tô trên đường giao nhau, xe nào phải nhường đường?",
+    "options": {
+      "A": "Xe từ đường phụ ra đường chính phải nhường đường cho xe đi trên đường chính.",
+      "B": "Xe nhỏ hơn phải nhường xe lớn hơn.",
+      "C": "Xe từ bên trái phải nhường xe từ bên phải."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 35,
+    "content": "Khi hai xe ô tô đi ngược chiều nhau trên đường hẹp, xe nào phải nhường đường?",
+    "options": {
+      "A": "Xe nào có tải nặng hơn phải nhường.",
+      "B": "Xe đi phía bên phải của đường theo chiều xe đó đi không đủ chỗ phải nhường, lùi hoặc tránh vào chỗ rộng hơn.",
+      "C": "Xe đi xuống dốc phải nhường xe lên dốc."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 36,
+    "content": "Người lái xe ô tô có được phép uống rượu, bia trước khi lái xe không?",
+    "options": {
+      "A": "Được uống ít, miễn là không say.",
+      "B": "Không được phép, theo quy định nghiêm cấm người điều khiển ô tô có nồng độ cồn trong máu.",
+      "C": "Được uống nếu nồng độ cồn dưới 50mg/100ml máu."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 37,
+    "content": "Khi dừng xe ô tô tại điểm dừng xe buýt không có vịnh đỗ xe, người lái xe phải chú ý điều gì?",
+    "options": {
+      "A": "Dừng xe nhanh nhất có thể để trả khách.",
+      "B": "Không được dừng xe tại khu vực này trừ khi điều khiển xe buýt.",
+      "C": "Bật đèn xi nhan, dừng sát lề đường bên phải, không cản trở các xe khác."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 38,
+    "content": "Xe ô tô tải khi chở hàng có chiều dài hàng vượt quá chiều dài thùng xe hoặc xe phải gắn gì ở đầu và cuối hàng?",
+    "options": {
+      "A": "Đèn phản quang màu đỏ.",
+      "B": "Cờ hiệu màu đỏ (ban ngày), đèn hoặc vật phản quang màu đỏ (ban đêm).",
+      "C": "Không cần gắn gì, chỉ cần cẩn thận khi lái."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 39,
+    "content": "Khi điều khiển xe ô tô, người lái xe có được sử dụng tai nghe không?",
+    "options": {
+      "A": "Được dùng 1 bên tai.",
+      "B": "Được dùng nếu âm lượng thấp.",
+      "C": "Không được sử dụng thiết bị âm thanh cá nhân (tai nghe) khi lái xe."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 40,
+    "content": "Khi lái xe ô tô mệt mỏi, buồn ngủ, người lái xe phải làm gì?",
+    "options": {
+      "A": "Mở cửa sổ hít thở không khí và tiếp tục lái.",
+      "B": "Uống cà phê và tiếp tục lái.",
+      "C": "Dừng xe vào nơi an toàn, nghỉ ngơi cho tỉnh táo mới tiếp tục lái xe."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 41,
+    "content": "Trong điều kiện đường trơn, xe ô tô có hệ thống ABS, người lái xe khi phanh gấp phải làm gì?",
+    "options": {
+      "A": "Đạp phanh nhịp nhàng từng cú ngắn.",
+      "B": "Đạp phanh liên tục và giữ nguyên để ABS phát huy tác dụng, đồng thời giữ vô lăng và điều hướng xe.",
+      "C": "Chỉ dùng phanh tay để tránh khóa bánh."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 42,
+    "content": "Khi xe ô tô bị hỏng trên đường, người lái xe phải đặt biển cảnh báo nguy hiểm ở phía sau xe như thế nào?",
+    "options": {
+      "A": "Đặt ngay phía sau xe.",
+      "B": "Đặt ở khoảng cách đủ xa để xe phía sau có thể quan sát và xử lý kịp thời, tùy theo điều kiện đường và tốc độ lưu thông.",
+      "C": "Không cần đặt biển, chỉ cần bật đèn khẩn cấp."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 43,
+    "content": "Khi lái xe ô tô trên đường núi, đường dốc quanh co, người lái xe cần tuân thủ nguyên tắc gì?",
+    "options": {
+      "A": "Đi sát mép đường phía bên núi để an toàn hơn.",
+      "B": "Đi đúng làn đường, giảm tốc độ trước các khúc cua, bấm còi cảnh báo khi qua chỗ khuất tầm nhìn.",
+      "C": "Đi nhanh để sớm thoát khỏi đoạn đường nguy hiểm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 44,
+    "content": "Khi xe ô tô bị rơi xuống sông hoặc hồ, người lái xe cần làm gì để thoát ra ngoài?",
+    "options": {
+      "A": "Mở cửa ngay lập tức khi xe chìm.",
+      "B": "Chờ cho nước ngập đầy cabin để áp suất cân bằng rồi mới mở cửa, hoặc đập vỡ cửa kính để thoát.",
+      "C": "Gọi điện cầu cứu và chờ người đến giúp."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 45,
+    "content": "Xe ô tô tải khi chở hàng hóa, trọng lượng hàng hóa không được vượt quá giới hạn tải trọng cho phép vì lý do gì?",
+    "options": {
+      "A": "Chỉ để bảo vệ đường bộ.",
+      "B": "Để đảm bảo an toàn cho xe, người và hàng hóa, bảo vệ đường bộ và không vi phạm pháp luật.",
+      "C": "Chỉ vì quy định hành chính."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 46,
+    "content": "Khi lái xe ô tô gặp đường ray xe lửa, người lái xe phải thực hiện như thế nào?",
+    "options": {
+      "A": "Chỉ cần quan sát và đi qua nhanh.",
+      "B": "Dừng lại trước vạch dừng, quan sát cả hai phía, đảm bảo không có tàu mới được đi qua.",
+      "C": "Giảm tốc độ và từ từ đi qua khi thấy không có tàu."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 47,
+    "content": "Khi điều khiển xe ô tô, người lái xe phải duy trì tư thế ngồi như thế nào?",
+    "options": {
+      "A": "Thoải mái, có thể ngả lưng nhiều để giảm mệt mỏi.",
+      "B": "Ngồi thẳng, điều chỉnh ghế và vô lăng phù hợp, thắt dây an toàn, có tầm nhìn bao quát tốt.",
+      "C": "Ngồi sát vô lăng để kiểm soát xe tốt hơn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 48,
+    "content": "Người lái xe ô tô cần kiểm tra dầu nhớt động cơ như thế nào?",
+    "options": {
+      "A": "Kiểm tra khi động cơ đang nổ.",
+      "B": "Kiểm tra khi động cơ đã tắt và xe đặt trên mặt phẳng, kiểm tra mực dầu trên que thăm dầu.",
+      "C": "Chỉ cần kiểm tra theo định kỳ bảo dưỡng không cần tự kiểm tra."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 49,
+    "content": "Khi điều khiển xe ô tô con qua đoạn đường có biển báo tốc độ tối đa 60 km/h, người lái xe đi với tốc độ bao nhiêu là vi phạm?",
+    "options": {
+      "A": "60 km/h.",
+      "B": "55 km/h.",
+      "C": "70 km/h."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 50,
+    "content": "Khi xe ô tô bị mất phanh khi đang lên dốc, người lái xe cần xử lý như thế nào?",
+    "options": {
+      "A": "Tắt máy ngay lập tức.",
+      "B": "Tiếp tục lên dốc để xe dừng tự nhiên do trọng lực, đánh vô lăng vào vách núi hoặc rào chắn an toàn.",
+      "C": "Tăng tốc để vượt qua đỉnh dốc."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 51,
+    "content": "Khi lái xe ô tô vào đường một chiều, người lái xe phải chú ý điều gì?",
+    "options": {
+      "A": "Được lái theo cả hai chiều nếu đường rộng.",
+      "B": "Phải đi đúng chiều được quy định, không được đi ngược chiều.",
+      "C": "Được lái ngược chiều nếu không có xe đối diện."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 52,
+    "content": "Khi điều khiển xe ô tô tải chở hàng hóa nguy hiểm (chất nổ, chất độc, chất phóng xạ), người lái xe phải tuân theo quy định gì?",
+    "options": {
+      "A": "Đi theo tuyến đường quy định, có giấy phép vận chuyển hàng nguy hiểm.",
+      "B": "Chỉ cần đi cẩn thận là đủ.",
+      "C": "Chỉ cần thông báo cho cơ quan chức năng là được phép chở."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 53,
+    "content": "Biển báo P (biển báo bổ sung thời gian) dưới biển cấm dừng có ý nghĩa gì?",
+    "options": {
+      "A": "Thời gian được phép dừng xe.",
+      "B": "Thời gian cấm dừng xe áp dụng theo biển.",
+      "C": "Thời gian hoạt động của bãi đậu xe gần đó."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 54,
+    "content": "Trên đường cao tốc, xe ô tô muốn vào đường cao tốc từ làn tăng tốc phải làm gì?",
+    "options": {
+      "A": "Dừng lại tại cuối làn tăng tốc và chờ khoảng trống.",
+      "B": "Tăng tốc độ trên làn tăng tốc, quan sát xe trên đường cao tốc, bật xi nhan và nhập vào làn khi an toàn.",
+      "C": "Nhập vào đường cao tốc ngay khi vừa lên dốc."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 55,
+    "content": "Khi lái xe ô tô trên đường cao tốc và muốn ra đường nhánh, người lái xe phải chuẩn bị từ khi nào?",
+    "options": {
+      "A": "Chỉ cần chuẩn bị khi thấy biển báo lối ra.",
+      "B": "Cần di chuyển vào làn bên phải từ xa, khoảng 500m-1km trước lối ra, theo dõi biển báo.",
+      "C": "Có thể chuyển làn đột ngột khi đến cửa ra."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 56,
+    "content": "Hành vi nào dưới đây là vi phạm quy định khi điều khiển xe ô tô?",
+    "options": {
+      "A": "Bật đèn xi nhan khi chuyển làn.",
+      "B": "Sử dụng điện thoại cầm tay khi đang lái xe.",
+      "C": "Giữ khoảng cách an toàn với xe phía trước."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 57,
+    "content": "Khi xe ô tô đang đi thì đèn cảnh báo nhiệt độ động cơ sáng lên (đèn màu đỏ), người lái xe cần làm gì?",
+    "options": {
+      "A": "Tiếp tục đi và xử lý khi đến điểm dừng.",
+      "B": "Dừng xe ngay vào lề đường an toàn, tắt máy, chờ động cơ nguội và kiểm tra nước làm mát.",
+      "C": "Tăng tốc độ để tạo thêm gió làm mát động cơ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 58,
+    "content": "Người lái xe ô tô chở người tối đa được chở bao nhiêu hành lý tay trên giá để đồ bên trên?",
+    "options": {
+      "A": "Không có giới hạn nếu hành lý nhỏ.",
+      "B": "Theo quy định của nhà sản xuất xe và không được che khuất tầm nhìn của người lái.",
+      "C": "Tối đa 10 kg/ghế."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 59,
+    "content": "Khi điều khiển xe ô tô qua ngã tư không có đèn tín hiệu và không có biển báo ưu tiên, người lái xe phải nhường đường cho xe nào?",
+    "options": {
+      "A": "Xe đến từ phía bên trái.",
+      "B": "Xe đến từ phía bên phải.",
+      "C": "Xe lớn hơn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 60,
+    "content": "Khi lái xe ô tô vào ban đêm trên đường vắng, người lái xe muốn dùng đèn chiếu xa thì cần tuân thủ điều kiện gì?",
+    "options": {
+      "A": "Được dùng tự do vào ban đêm khi không có đèn đường.",
+      "B": "Phải chuyển sang đèn chiếu gần khi gặp xe ngược chiều hoặc đi sau xe khác.",
+      "C": "Không được dùng đèn chiếu xa trong đô thị."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 61,
+    "content": "Xe ô tô tải chở hàng vượt quá tải trọng cho phép sẽ gây ra hậu quả gì?",
+    "options": {
+      "A": "Chỉ ảnh hưởng đến tiêu hao nhiên liệu.",
+      "B": "Gây hư hỏng đường, giảm khả năng điều khiển xe, tăng nguy cơ tai nạn, vi phạm pháp luật.",
+      "C": "Chỉ ảnh hưởng đến lốp xe."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 62,
+    "content": "Khi lái xe ô tô con trong đô thị, tốc độ tối đa cho phép là bao nhiêu km/h?",
+    "options": {
+      "A": "60 km/h.",
+      "B": "50 km/h.",
+      "C": "40 km/h."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 63,
+    "content": "Khi điều khiển xe ô tô, người lái xe gặp trời mưa lớn, tầm nhìn hạn chế phải làm gì?",
+    "options": {
+      "A": "Đi nhanh để sớm thoát khỏi mưa.",
+      "B": "Bật đèn sương mù (nếu có), bật đèn xi nhan khẩn cấp (đèn 4 nháy), giảm tốc độ, tăng khoảng cách an toàn.",
+      "C": "Dừng xe ngay giữa đường để chờ tạnh mưa."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 64,
+    "content": "Trong tình huống xe ô tô sắp đâm vào xe đi ngược chiều, người lái xe nên tránh về phía nào?",
+    "options": {
+      "A": "Tránh sang trái vào làn xe ngược chiều.",
+      "B": "Tránh sang phải vào lề đường, thậm chí lao vào vệ cỏ hoặc rãnh đường.",
+      "C": "Giữ nguyên hướng và đạp phanh mạnh."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 65,
+    "content": "Khi điều khiển xe ô tô qua khu vực trường học vào giờ học sinh tan học, người lái xe phải làm gì?",
+    "options": {
+      "A": "Đi bình thường vì có biển báo.",
+      "B": "Giảm tốc độ, quan sát kỹ và nhường đường cho học sinh sang đường.",
+      "C": "Bấm còi để cảnh báo học sinh."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 66,
+    "content": "Người lái xe ô tô kinh doanh vận tải phải có thêm chứng chỉ gì ngoài giấy phép lái xe?",
+    "options": {
+      "A": "Không cần thêm giấy tờ gì.",
+      "B": "Chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.",
+      "C": "Bằng kỹ sư giao thông."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 67,
+    "content": "Xe ô tô kinh doanh vận tải hành khách cần phải lắp thiết bị giám sát hành trình (hộp đen) để làm gì?",
+    "options": {
+      "A": "Để tính phí đường bộ tự động.",
+      "B": "Giám sát và ghi lại thời gian lái xe, tốc độ, lộ trình nhằm đảm bảo an toàn và quản lý vận tải.",
+      "C": "Để theo dõi vị trí xe phục vụ hành khách."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 68,
+    "content": "Khi lái xe ô tô con trên đường bộ thông thường ngoài đô thị, có dải phân cách, tốc độ tối đa cho phép là bao nhiêu km/h?",
+    "options": {
+      "A": "100 km/h.",
+      "B": "90 km/h.",
+      "C": "80 km/h."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 69,
+    "content": "Khi điều khiển xe ô tô vào đường hầm, người lái xe cần bật loại đèn nào?",
+    "options": {
+      "A": "Đèn chiếu xa.",
+      "B": "Đèn chiếu gần.",
+      "C": "Chỉ bật đèn xi nhan."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 70,
+    "content": "Khi điều khiển xe ô tô, người lái xe có thể uống nước, ăn uống không?",
+    "options": {
+      "A": "Được phép nếu chỉ ăn nhẹ.",
+      "B": "Không nên vì ảnh hưởng đến khả năng tập trung và kiểm soát xe.",
+      "C": "Được phép khi đang đứng chờ đèn đỏ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 71,
+    "content": "Người lái xe ô tô không được điều khiển xe liên tục trong bao nhiêu giờ trước khi phải nghỉ ngơi theo quy định?",
+    "options": {
+      "A": "4 giờ.",
+      "B": "8 giờ.",
+      "C": "6 giờ."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 72,
+    "content": "Khi lái xe ô tô đi qua chỗ có biển báo 'Đường người đi bộ cắt ngang', người lái xe phải làm gì?",
+    "options": {
+      "A": "Bấm còi để cảnh báo người đi bộ.",
+      "B": "Giảm tốc độ, chú ý quan sát người đi bộ và nhường đường cho họ.",
+      "C": "Đi nhanh qua để không gây ách tắc."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 73,
+    "content": "Để kiểm soát xe tốt nhất khi lái xe trên đường trơn trượt, người lái xe ô tô nên làm gì?",
+    "options": {
+      "A": "Tắt hệ thống kiểm soát lực kéo (TCS) để có cảm giác lái tốt hơn.",
+      "B": "Giảm tốc độ từ trước, giữ khoảng cách lớn, tránh phanh và tăng tốc đột ngột.",
+      "C": "Bơm căng lốp hơn để tăng độ bám đường."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 74,
+    "content": "Xe ô tô cần phải kiểm định an toàn kỹ thuật và bảo vệ môi trường định kỳ như thế nào?",
+    "options": {
+      "A": "Mỗi 5 năm một lần.",
+      "B": "Theo quy định hiện hành của pháp luật về đăng kiểm phương tiện.",
+      "C": "Chỉ khi xe có dấu hiệu hỏng hóc."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 75,
+    "content": "Khi xe ô tô va chạm giao thông, người lái xe không bị thương phải ưu tiên làm điều gì đầu tiên?",
+    "options": {
+      "A": "Chụp ảnh hiện trường để làm bằng chứng.",
+      "B": "Đảm bảo an toàn cho bản thân và người khác, sơ cứu nạn nhân, gọi cấp cứu và báo cảnh sát.",
+      "C": "Liên hệ công ty bảo hiểm ngay lập tức."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 76,
+    "content": "Khi đỗ xe ô tô trên đường dốc xuống (đầu xe hướng xuống dốc), người lái xe phải xoay bánh xe về phía nào?",
+    "options": {
+      "A": "Xoay về phía trong (vào lề đường) và gài số lùi.",
+      "B": "Xoay về phía ngoài (ra xa lề đường) để bánh tựa vào lề nếu trôi.",
+      "C": "Giữ thẳng bánh và chỉ dùng phanh tay."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 77,
+    "content": "Khi tham gia giao thông, người lái xe ô tô phải tuân thủ giới hạn tốc độ vì lý do gì?",
+    "options": {
+      "A": "Chỉ để tránh bị phạt.",
+      "B": "Để đảm bảo an toàn cho bản thân, hành khách, và những người tham gia giao thông khác.",
+      "C": "Để bảo vệ động cơ xe."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 78,
+    "content": "Xe ô tô con muốn dừng tạm thời trên đường bộ trong khu đô thị, khoảng cách tối thiểu phải cách đầu dốc xuống của cầu là bao nhiêu mét?",
+    "options": {
+      "A": "5 mét.",
+      "B": "10 mét.",
+      "C": "20 mét."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 79,
+    "content": "Người lái xe ô tô khi bị cảnh sát giao thông dừng xe kiểm tra phải làm gì?",
+    "options": {
+      "A": "Tiếp tục đi nếu đang vội.",
+      "B": "Chấp hành hiệu lệnh dừng xe, đưa xe vào lề đường an toàn, xuất trình giấy tờ theo yêu cầu.",
+      "C": "Chỉ dừng xe nếu vi phạm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 80,
+    "content": "Khi lái xe ô tô, nhìn thấy biển báo tam giác màu đỏ, người lái xe phải hiểu đây là loại biển báo gì?",
+    "options": {
+      "A": "Biển báo cấm.",
+      "B": "Biển báo nguy hiểm, cảnh báo người lái xe phải chú ý và cẩn thận.",
+      "C": "Biển báo chỉ dẫn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 81,
+    "content": "Khi điều khiển xe ô tô, người lái xe phát hiện mình quên mang theo giấy phép lái xe, phải xử lý như thế nào?",
+    "options": {
+      "A": "Tiếp tục đi và giải thích với cảnh sát nếu bị kiểm tra.",
+      "B": "Không được điều khiển xe, phải quay về lấy giấy phép hoặc nhờ người có giấy phép thay thế lái.",
+      "C": "Chỉ đi quãng đường ngắn gần nhà là được."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 82,
+    "content": "Theo quy định, người lái xe ô tô kinh doanh vận tải không được lái xe quá bao nhiêu giờ trong một ngày?",
+    "options": {
+      "A": "8 giờ.",
+      "B": "10 giờ.",
+      "C": "12 giờ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 83,
+    "content": "Khi điều khiển xe ô tô, người lái xe phát hiện xe không đủ điều kiện an toàn kỹ thuật (phanh yếu, đèn không hoạt động...) thì phải làm gì?",
+    "options": {
+      "A": "Vẫn lái xe nhưng phải cẩn thận hơn.",
+      "B": "Không được tiếp tục tham gia giao thông, phải đưa xe đi sửa chữa.",
+      "C": "Chỉ dừng lái khi phanh hoàn toàn không hoạt động."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 84,
+    "content": "Khi lái xe ô tô vào ban đêm và gặp sương mù dày đặc, người lái xe nên làm gì?",
+    "options": {
+      "A": "Bật đèn pha chiếu xa để nhìn xa hơn.",
+      "B": "Bật đèn sương mù (nếu có), đèn chiếu gần, giảm tốc độ đáng kể, tăng khoảng cách an toàn.",
+      "C": "Dừng xe ở bất kỳ vị trí nào để chờ sương tan."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 85,
+    "content": "Trên đường có bốn làn xe, xe ô tô con không chở hàng nên đi ở làn nào?",
+    "options": {
+      "A": "Làn trong cùng (làn số 1, sát dải phân cách giữa).",
+      "B": "Làn ngoài cùng bên phải (làn số 4).",
+      "C": "Làn số 2 hoặc làn số 3 tùy tốc độ, tuân theo biển báo phân làn."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 86,
+    "content": "Khi xe ô tô bị chết máy giữa đường, người lái xe cần làm gì ngay lập tức?",
+    "options": {
+      "A": "Để xe nguyên tại chỗ và gọi điện thoại cầu cứu.",
+      "B": "Bật đèn khẩn cấp, cố đẩy xe vào lề đường hoặc đặt biển cảnh báo, sau đó tìm cách khắc phục.",
+      "C": "Tiếp tục nổ máy liên tục cho đến khi xe khởi động lại."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 87,
+    "content": "Khi điều khiển xe ô tô, người lái xe nhìn thấy tín hiệu đèn giao thông màu đỏ nhấp nháy tại giao lộ, phải xử lý như thế nào?",
+    "options": {
+      "A": "Đi thẳng vì đèn không phải đỏ ổn định.",
+      "B": "Dừng hẳn, quan sát kỹ và đi khi an toàn (tương tự biển báo STOP).",
+      "C": "Giảm tốc độ và đi cẩn thận (tương tự đèn vàng nhấp nháy)."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 88,
+    "content": "Khi điều khiển xe ô tô thấy đèn tín hiệu vàng nhấp nháy, người lái xe phải làm gì?",
+    "options": {
+      "A": "Dừng lại chờ đèn xanh.",
+      "B": "Được đi nhưng phải giảm tốc độ, chú ý quan sát và nhường đường cho người đi bộ và phương tiện khác.",
+      "C": "Tăng tốc nhanh qua ngã tư."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 89,
+    "content": "Khi xe ô tô đang chạy trên đường cao tốc và phát hiện ra mình đi nhầm đường, người lái xe phải xử lý như thế nào?",
+    "options": {
+      "A": "Quay đầu ngay tại chỗ.",
+      "B": "Đi đến lối thoát gần nhất rồi mới quay đầu.",
+      "C": "Lùi xe về lối vào đã đi qua."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 90,
+    "content": "Người lái xe ô tô bị tịch thu giấy phép lái xe thì có được tiếp tục lái xe không?",
+    "options": {
+      "A": "Được lái xe nếu có biên lai tạm giữ giấy phép.",
+      "B": "Không được phép điều khiển xe cho đến khi được trả lại giấy phép hoặc được cấp giấy phép mới.",
+      "C": "Được lái xe nếu có người đi cùng có giấy phép hạng tương đương."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 91,
+    "content": "Khi điều khiển xe ô tô, người lái xe có được phép nói chuyện điện thoại bằng loa ngoài (speakerphone, không cầm điện thoại) không?",
+    "options": {
+      "A": "Được phép vì không dùng tay cầm điện thoại.",
+      "B": "Không được khuyến khích vì vẫn gây mất tập trung; chỉ thiết bị điện thoại rảnh tay lắp cố định trên xe mới được phép.",
+      "C": "Chỉ được phép khi đang đứng yên."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 92,
+    "content": "Khi điều khiển xe ô tô, người lái xe phải điều chỉnh gương chiếu hậu như thế nào?",
+    "options": {
+      "A": "Điều chỉnh khi đang lái xe để thuận tiện.",
+      "B": "Điều chỉnh trước khi khởi hành để có tầm nhìn rõ ràng phía sau và hai bên xe.",
+      "C": "Không cần điều chỉnh vì gương đã được căn chỉnh sẵn từ nhà máy."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 93,
+    "content": "Khi điều khiển xe ô tô con chở người, người lái xe được phép chở tối đa bao nhiêu người (không kể người lái)?",
+    "options": {
+      "A": "Theo số ghế có dây đai an toàn trên xe.",
+      "B": "8 người.",
+      "C": "Theo số ghế ngồi thiết kế của xe (số chỗ ghi trong giấy đăng ký xe), không vượt quá số chỗ được phép."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 94,
+    "content": "Khi lái xe ô tô, trường hợp nào thì người lái xe được phép vượt xe phía trước qua phần đường ngược chiều?",
+    "options": {
+      "A": "Khi đường đủ rộng để vượt an toàn.",
+      "B": "Khi vạch tim đường là nét đứt và đảm bảo các điều kiện vượt an toàn.",
+      "C": "Khi không có xe ngược chiều trong tầm nhìn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 95,
+    "content": "Biển báo hình tròn viền đỏ, nền trắng, có số '60' bên trong có ý nghĩa gì?",
+    "options": {
+      "A": "Tốc độ tối thiểu 60 km/h.",
+      "B": "Tốc độ tối đa 60 km/h.",
+      "C": "Cách 60 km đến điểm đích."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 96,
+    "content": "Khi điều khiển xe ô tô gặp đường cấm, người lái xe phải làm gì?",
+    "options": {
+      "A": "Có thể đi vào nếu không có xe đi ngược chiều.",
+      "B": "Không được đi vào, phải tìm đường khác.",
+      "C": "Chỉ cần giảm tốc độ và cẩn thận khi đi vào."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 97,
+    "content": "Người lái xe ô tô phải làm gì khi thấy người đi bộ đang qua đường trên vạch kẻ dành cho người đi bộ?",
+    "options": {
+      "A": "Bấm còi để người đi bộ đi nhanh hơn.",
+      "B": "Giảm tốc độ, quan sát và nhường đường cho người đi bộ qua đường an toàn.",
+      "C": "Vượt qua nếu có đủ khoảng cách."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 98,
+    "content": "Khi lái xe ô tô qua khu vực có trẻ em, người lái xe phải chú ý điều gì đặc biệt?",
+    "options": {
+      "A": "Chỉ cần giảm tốc độ.",
+      "B": "Giảm tốc độ tối đa, quan sát kỹ vì trẻ em có thể bất ngờ chạy ra đường.",
+      "C": "Bấm còi để cảnh báo trẻ em."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 99,
+    "content": "Khi điều khiển xe ô tô, người lái xe nhìn thấy một người đột ngột lao ra đường từ phía trước, phải xử lý như thế nào?",
+    "options": {
+      "A": "Bấm còi mạnh và tăng tốc qua.",
+      "B": "Đạp phanh gấp và đánh lái tránh nếu có thể, ưu tiên tránh sang phải.",
+      "C": "Chỉ bấm còi để cảnh báo người đi bộ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 100,
+    "content": "Xe ô tô bị phạt tiền và tước giấy phép lái xe trong bao lâu nếu lái xe có nồng độ cồn vượt mức cho phép?",
+    "options": {
+      "A": "Theo quy định xử phạt vi phạm hành chính về trật tự an toàn giao thông đường bộ hiện hành.",
+      "B": "Chỉ phạt tiền, không tước giấy phép.",
+      "C": "Tước giấy phép lái xe 1 tháng."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 101,
+    "content": "Khi điều khiển xe ô tô, người lái xe được phép làm gì khi đèn tín hiệu giao thông đang màu đỏ?",
+    "options": {
+      "A": "Rẽ phải nếu không có biển cấm rẽ phải khi đèn đỏ và nhường đường cho người đi bộ, xe đi từ hướng khác.",
+      "B": "Rẽ phải và rẽ trái tự do nếu không có xe ngược chiều.",
+      "C": "Không được làm gì, phải dừng hoàn toàn."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 102,
+    "content": "Khi lái xe ô tô vượt một xe khác và đã vượt xong, người lái xe phải làm gì?",
+    "options": {
+      "A": "Về làn bên phải ngay khi qua đầu xe bị vượt.",
+      "B": "Chỉ về làn bên phải khi đã qua đủ khoảng cách an toàn với xe bị vượt, bật xi nhan phải trước khi chuyển làn.",
+      "C": "Tiếp tục đi trên làn trái."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 103,
+    "content": "Người lái xe ô tô vi phạm tốc độ sẽ bị xử lý như thế nào?",
+    "options": {
+      "A": "Chỉ bị nhắc nhở lần đầu.",
+      "B": "Bị xử phạt theo quy định của pháp luật về vi phạm tốc độ, có thể bị tước giấy phép lái xe.",
+      "C": "Chỉ phạt khi gây tai nạn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 104,
+    "content": "Xe ô tô con có thể đỗ trên phần lề đường bằng đất (đường không có vỉa hè) không?",
+    "options": {
+      "A": "Được, miễn là không cản trở giao thông.",
+      "B": "Được đỗ nếu lề đường đủ rộng và chắc chắn không lún.",
+      "C": "Chỉ được đỗ nếu không còn vị trí khác và phải đảm bảo an toàn."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 105,
+    "content": "Người lái xe ô tô phải dừng xe cách vạch dừng cho người đi bộ bao nhiêu mét khi không có vạch dừng xe?",
+    "options": {
+      "A": "3 mét.",
+      "B": "5 mét.",
+      "C": "10 mét."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 106,
+    "content": "Khi điều khiển xe ô tô trên đường có làn đường dành riêng cho xe buýt, người lái xe ô tô con phải làm gì?",
+    "options": {
+      "A": "Có thể đi vào làn xe buýt khi không có xe buýt.",
+      "B": "Không được đi vào làn đường dành riêng cho xe buýt trừ khi có biển cho phép.",
+      "C": "Được đi vào làn xe buýt sau 22 giờ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 107,
+    "content": "Khi lái xe ô tô, người lái xe phát hiện lốp xe bị xì hơi nhẹ (áp suất thấp), cần làm gì?",
+    "options": {
+      "A": "Tiếp tục lái cho đến khi đến trạm bơm xe gần nhất.",
+      "B": "Dừng xe vào lề đường an toàn và kiểm tra, bơm lốp hoặc thay bánh dự phòng nếu cần.",
+      "C": "Lái chậm lại và bơm thêm khi tiện."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 108,
+    "content": "Khi lái xe ô tô tải chở hàng cồng kềnh (hàng rộng hơn thùng xe), người lái xe phải tuân thủ điều gì?",
+    "options": {
+      "A": "Chỉ cần lái cẩn thận.",
+      "B": "Phải xin phép cơ quan có thẩm quyền, chỉ di chuyển theo lộ trình cho phép, có xe hộ tống và đèn/cờ cảnh báo.",
+      "C": "Chỉ cần chở vào ban đêm khi ít xe."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 109,
+    "content": "Theo quy định, xe ô tô con chở người dưới bao nhiêu tuổi phải sử dụng ghế ngồi an toàn dành cho trẻ em?",
+    "options": {
+      "A": "Dưới 12 tuổi.",
+      "B": "Dưới 10 tuổi và chiều cao dưới 1,35 mét.",
+      "C": "Dưới 7 tuổi."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 110,
+    "content": "Khi điều khiển xe ô tô, người lái xe phát hiện phía trước có vụ tai nạn đang xảy ra, cần làm gì?",
+    "options": {
+      "A": "Giảm tốc độ, quan sát và tiếp tục đi qua.",
+      "B": "Giảm tốc, dừng xe an toàn, bảo vệ hiện trường, hỗ trợ nạn nhân nếu có thể, gọi 113 và 115.",
+      "C": "Quay đầu xe tránh khu vực tai nạn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 111,
+    "content": "Biển báo hình vuông nền xanh có mũi tên cong (quay đầu xe) có ý nghĩa gì?",
+    "options": {
+      "A": "Cấm quay đầu xe.",
+      "B": "Được phép quay đầu xe tại vị trí đó.",
+      "C": "Phải quay đầu xe bắt buộc."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 112,
+    "content": "Khi điều khiển xe ô tô, người lái xe có được phép chạy song song với xe khác trên cùng một làn không?",
+    "options": {
+      "A": "Được, nếu đường đủ rộng.",
+      "B": "Không được, mỗi làn đường chỉ cho một xe chạy.",
+      "C": "Chỉ được trong trường hợp khẩn cấp."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 113,
+    "content": "Khi lái xe ô tô qua đường sắt có rào chắn, người lái xe phải làm gì khi rào chắn đang đóng?",
+    "options": {
+      "A": "Vượt qua nhanh nếu thấy không có tàu.",
+      "B": "Dừng lại trước rào chắn và chờ cho đến khi rào chắn mở.",
+      "C": "Đi chậm và cẩn thận qua khi rào chắn đang đóng."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 114,
+    "content": "Khi điều khiển xe ô tô trên đường, người lái xe có nghĩa vụ phải nhường đường cho phương tiện nào?",
+    "options": {
+      "A": "Chỉ xe cứu thương.",
+      "B": "Xe ưu tiên đang phát tín hiệu ưu tiên (đèn hú, còi hú).",
+      "C": "Tất cả xe lớn hơn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 115,
+    "content": "Xe ô tô bị hỏng và cần kéo trên đường bộ, dây hoặc thanh kéo phải đảm bảo điều kiện gì?",
+    "options": {
+      "A": "Chỉ cần đủ chắc để kéo xe.",
+      "B": "Chiều dài dây kéo không quá 10 mét, phải có vật báo hiệu ở giữa, xe được kéo phải có người điều khiển.",
+      "C": "Chiều dài dây kéo không quá 5 mét."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 116,
+    "content": "Khi lái xe ô tô, người lái xe gặp hiệu lệnh của cảnh sát giao thông khác với đèn tín hiệu giao thông, phải chấp hành theo hiệu lệnh nào?",
+    "options": {
+      "A": "Chấp hành theo đèn tín hiệu giao thông.",
+      "B": "Chấp hành theo hiệu lệnh của cảnh sát giao thông.",
+      "C": "Tự quyết định theo tình huống."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 117,
+    "content": "Theo quy định, người lái xe ô tô buộc phải dừng xe lại khi gặp trường hợp nào dưới đây?",
+    "options": {
+      "A": "Khi gặp đường đang sửa chữa.",
+      "B": "Khi có hiệu lệnh dừng xe của người điều khiển giao thông, khi đèn tín hiệu đỏ, khi có biển báo buộc dừng.",
+      "C": "Khi trời mưa lớn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 118,
+    "content": "Khi điều khiển xe ô tô, người lái xe nhìn vào gương chiếu hậu thấy xe cảnh sát đang bật đèn và còi ưu tiên phía sau, phải làm gì?",
+    "options": {
+      "A": "Tăng tốc để nhường đường nhanh hơn.",
+      "B": "Giảm tốc độ, dần đưa xe vào sát lề đường bên phải, dừng lại nếu cần để nhường đường.",
+      "C": "Tiếp tục đi bình thường nếu đang đúng làn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 119,
+    "content": "Khi lái xe ô tô trên đường có biển báo 'Đường ưu tiên', xe đang đi trên đường ưu tiên đến ngã tư phải xử lý như thế nào?",
+    "options": {
+      "A": "Đi thẳng không cần giảm tốc vì có quyền ưu tiên.",
+      "B": "Vẫn phải giảm tốc, quan sát và nhường đường cho các xe đã vào giao lộ trước.",
+      "C": "Chỉ giảm tốc khi thấy có xe từ đường phụ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 120,
+    "content": "Khi lái xe ô tô tải, người lái xe cần biết tải trọng của cầu đường để làm gì?",
+    "options": {
+      "A": "Chỉ để tham khảo.",
+      "B": "Không được đi trên cầu, đường có tải trọng cho phép thấp hơn tổng trọng lượng xe (xe + hàng).",
+      "C": "Để điều chỉnh tốc độ khi qua cầu."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 121,
+    "content": "Người lái xe ô tô phải định kỳ bảo dưỡng xe theo quy định của nhà sản xuất vì lý do gì?",
+    "options": {
+      "A": "Chỉ để đảm bảo bảo hành của nhà sản xuất.",
+      "B": "Để đảm bảo xe luôn trong tình trạng kỹ thuật tốt, an toàn khi tham gia giao thông và bền hơn.",
+      "C": "Chỉ để tiết kiệm nhiên liệu."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 122,
+    "content": "Khi điều khiển xe ô tô, người lái xe được phép dừng xe trong bao lâu tại điểm dừng xe tạm thời có biển quy định thời gian?",
+    "options": {
+      "A": "Không giới hạn thời gian.",
+      "B": "Theo thời gian quy định ghi trên biển báo.",
+      "C": "Tối đa 15 phút."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 123,
+    "content": "Khi lái xe ô tô trên đường, phát hiện phía trước có xe đang lùi ra từ ngõ hoặc garage, người lái xe cần làm gì?",
+    "options": {
+      "A": "Bấm còi liên tục để cảnh báo.",
+      "B": "Giảm tốc độ, quan sát và sẵn sàng dừng lại nhường đường.",
+      "C": "Vượt nhanh qua để không bị cản đường."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 124,
+    "content": "Khi lái xe ô tô vào ban đêm ở khu vực không có đèn đường, người lái xe nên làm gì?",
+    "options": {
+      "A": "Bật đèn chiếu xa liên tục.",
+      "B": "Giảm tốc độ, bật đèn chiếu gần hoặc chiếu xa tùy theo tình huống, chú ý người đi bộ và xe đạp.",
+      "C": "Đi nhanh hơn để sớm qua khu vực tối."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 125,
+    "content": "Khi điều khiển xe ô tô, người lái xe gặp công trường đang thi công thu hẹp làn đường, phải xử lý như thế nào?",
+    "options": {
+      "A": "Vượt nhanh qua công trường.",
+      "B": "Giảm tốc độ, tuân thủ biển báo và hiệu lệnh của người điều khiển giao thông tại công trường.",
+      "C": "Đi sang làn đối diện để tránh công trường."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 126,
+    "content": "Khi điều khiển xe ô tô, người lái xe phát hiện có xe đang đi sai làn chuẩn bị va chạm, phải làm gì?",
+    "options": {
+      "A": "Bật đèn pha để cảnh báo.",
+      "B": "Giảm tốc độ và nhường đường tránh va chạm, bấm còi nếu cần thiết.",
+      "C": "Tiếp tục đi và để xe kia tự tránh."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 127,
+    "content": "Xe ô tô không được đỗ tại những nơi nào dưới đây?",
+    "options": {
+      "A": "Trước cổng trường học, bệnh viện trong giờ cao điểm.",
+      "B": "Trên phần đường xe chạy, trong hầm đường bộ, tại nơi có biển cấm đỗ, gần cầu, gần miệng cống.",
+      "C": "Trên vỉa hè rộng."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 128,
+    "content": "Khi lái xe ô tô qua ngã tư, tín hiệu đèn giao thông bị tắt hoặc hỏng, người lái xe phải xử lý theo nguyên tắc nào?",
+    "options": {
+      "A": "Xe nào đến trước được đi trước.",
+      "B": "Nhường đường cho xe từ bên phải và tuân theo hiệu lệnh của người điều khiển giao thông nếu có.",
+      "C": "Xe lớn hơn được ưu tiên đi trước."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 129,
+    "content": "Xe ô tô khi tham gia giao thông phải đảm bảo điều kiện gì về khí thải?",
+    "options": {
+      "A": "Không cần kiểm tra khí thải.",
+      "B": "Phải đảm bảo khí thải trong giới hạn cho phép theo tiêu chuẩn kỹ thuật môi trường và có giấy chứng nhận kiểm định đạt tiêu chuẩn.",
+      "C": "Chỉ cần đảm bảo xe không xả khói đen đậm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 130,
+    "content": "Khi lái xe ô tô, thấy đèn cảnh báo áp suất dầu bật sáng (đèn đỏ hình chiếc đèn dầu), người lái xe phải làm gì?",
+    "options": {
+      "A": "Tiếp tục đi và kiểm tra sau khi đến nơi.",
+      "B": "Dừng xe ngay vào nơi an toàn, tắt máy ngay lập tức để tránh hỏng động cơ, kiểm tra mức dầu.",
+      "C": "Giảm tốc độ và đổ thêm dầu khi tiện."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 131,
+    "content": "Khi lái xe ô tô trên đường có nhiều xe, người lái xe nên quan sát phía trước ở khoảng cách bao xa?",
+    "options": {
+      "A": "Quan sát xe ngay phía trước là đủ.",
+      "B": "Quan sát càng xa càng tốt (cả xe ngay trước và xa hơn) để có thời gian xử lý tình huống.",
+      "C": "Chỉ cần quan sát trong phạm vi 20 mét."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 132,
+    "content": "Khi đỗ xe ô tô và rời khỏi xe, người lái xe phải làm gì?",
+    "options": {
+      "A": "Chỉ cần tắt máy.",
+      "B": "Tắt máy, rút chìa khóa, kéo phanh tay, khóa cửa xe và kiểm tra xe có thể tự trôi không.",
+      "C": "Chỉ cần khóa cửa là đủ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 133,
+    "content": "Người lái xe ô tô muốn quay đầu xe phải bảo đảm điều kiện nào?",
+    "options": {
+      "A": "Chỉ cần không có xe ngược chiều.",
+      "B": "Phải có tầm nhìn đủ xa, không gây cản trở cho người và phương tiện khác, không thực hiện ở nơi có biển cấm quay đầu.",
+      "C": "Chỉ được quay đầu ở ngã tư."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 134,
+    "content": "Khi điều khiển xe ô tô, người lái xe phải sử dụng còi như thế nào để không vi phạm quy định?",
+    "options": {
+      "A": "Sử dụng còi bất kỳ lúc nào cảm thấy cần thiết.",
+      "B": "Chỉ sử dụng còi khi cần thiết để cảnh báo, không dùng còi liên tục hoặc kéo dài và tuân theo quy định giờ và địa điểm cấm còi.",
+      "C": "Không được sử dụng còi trong khu đô thị."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 135,
+    "content": "Khi xe ô tô bị chết máy giữa đường ray xe lửa và không thể khởi động lại, người lái xe phải làm gì ngay lập tức?",
+    "options": {
+      "A": "Cố gắng khởi động xe.",
+      "B": "Yêu cầu mọi người trên xe xuống ngay, chạy ra khỏi vùng nguy hiểm theo hướng vuông góc với đường ray, báo cho nhân viên đường sắt.",
+      "C": "Gọi điện thoại cầu cứu và chờ trong xe."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 136,
+    "content": "Xe ô tô có được phép đỗ trên cầu không?",
+    "options": {
+      "A": "Được đỗ nếu cầu đủ rộng.",
+      "B": "Không được đỗ trên cầu trừ cầu có phần dành riêng cho đỗ xe.",
+      "C": "Chỉ được đỗ trong trường hợp khẩn cấp."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 137,
+    "content": "Khi điều khiển xe ô tô con trên đường đô thị, xe đang đi với tốc độ bao nhiêu thì cần bật đèn xi nhan ít nhất bao nhiêu mét trước khi rẽ?",
+    "options": {
+      "A": "Bật xi nhan trước ít nhất 30 mét.",
+      "B": "Bật xi nhan trước ít nhất 50 mét, quan sát gương chiếu hậu và chỉ rẽ khi an toàn.",
+      "C": "Không có quy định cụ thể."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 138,
+    "content": "Khi điều khiển xe ô tô, người lái xe không được làm gì trong khi đang lùi xe?",
+    "options": {
+      "A": "Quan sát phía sau qua gương.",
+      "B": "Lùi xe nơi có biển cấm lùi xe, trên đường cao tốc, trong hầm đường bộ.",
+      "C": "Bật đèn lùi."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 139,
+    "content": "Khi điều khiển xe ô tô, người lái xe gặp biển báo 'Chú ý trẻ em' phải làm gì?",
+    "options": {
+      "A": "Đi bình thường vì có biển cảnh báo.",
+      "B": "Giảm tốc độ, quan sát cẩn thận và sẵn sàng dừng lại để nhường đường.",
+      "C": "Bấm còi để trẻ em chú ý."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 140,
+    "content": "Người lái xe ô tô phải dừng xe cách điểm đầu của vạch kẻ đường cho người đi bộ tối thiểu bao nhiêu mét khi không có vạch dừng xe?",
+    "options": {
+      "A": "1 mét.",
+      "B": "5 mét.",
+      "C": "3 mét."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 141,
+    "content": "Xe ô tô kinh doanh vận tải hàng hóa bằng container phải có thiết bị gì bắt buộc?",
+    "options": {
+      "A": "Chỉ cần có đèn cảnh báo.",
+      "B": "Thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe theo quy định.",
+      "C": "Hệ thống ABS và ESP."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 142,
+    "content": "Khi lái xe ô tô qua đoạn đường đang ngập nước sâu chưa biết độ sâu, người lái xe nên làm gì trước?",
+    "options": {
+      "A": "Đi qua với tốc độ thấp nhất.",
+      "B": "Quan sát, ước lượng độ sâu bằng cách quan sát xe khác hoặc bộ hành qua trước, nếu quá sâu thì không đi.",
+      "C": "Tháo giày và lội xuống kiểm tra."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 143,
+    "content": "Theo quy định, người điều khiển xe ô tô khi đến gần vạch dừng cho người đi bộ và không có tín hiệu đèn giao thông, phải làm gì?",
+    "options": {
+      "A": "Đi qua nhanh nếu không có người đi bộ trước mặt.",
+      "B": "Quan sát, giảm tốc độ và nhường đường cho người đi bộ đang qua đường.",
+      "C": "Bấm còi để người đi bộ chú ý."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 144,
+    "content": "Xe ô tô tải vận chuyển hàng hóa quá khổ, quá tải phải có biện pháp gì?",
+    "options": {
+      "A": "Chỉ cần đi vào ban đêm ít xe.",
+      "B": "Phải xin phép cơ quan có thẩm quyền, có giấy phép lưu hành, thực hiện đúng lộ trình và thời gian cho phép.",
+      "C": "Chỉ cần có xe hộ tống là đủ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 145,
+    "content": "Khi điều khiển xe ô tô, người lái xe nhận thấy xe bị kéo lệch về một bên khi phanh, đây là dấu hiệu của sự cố gì?",
+    "options": {
+      "A": "Áp suất lốp quá cao.",
+      "B": "Phanh bị mòn không đều, hoặc hệ thống phanh bị lỗi ở một bên.",
+      "C": "Đường bị nghiêng."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 146,
+    "content": "Xe ô tô khi đi trong đoàn xe ưu tiên (đoàn xe có xe cảnh sát dẫn đường), các phương tiện khác phải xử lý như thế nào?",
+    "options": {
+      "A": "Chỉ nhường đường cho xe cảnh sát dẫn đầu.",
+      "B": "Nhường đường cho toàn bộ đoàn xe cho đến khi đoàn đi qua hết.",
+      "C": "Nhường đường cho 3 xe đầu tiên trong đoàn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 147,
+    "content": "Khi điều khiển xe ô tô trong trời mưa, người lái xe cần tăng khoảng cách an toàn với xe trước lên bao nhiêu lần so với đường khô?",
+    "options": {
+      "A": "Gấp đôi.",
+      "B": "Không cần tăng nếu đường tốt.",
+      "C": "Tăng thêm 10 mét là đủ."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 148,
+    "content": "Khi điều khiển xe ô tô, người lái xe có được phép cho người ngồi trên mui xe, thùng xe không?",
+    "options": {
+      "A": "Được phép nếu quãng đường ngắn.",
+      "B": "Không được phép, trừ xe chuyên dụng có thiết kế cho việc này.",
+      "C": "Chỉ được phép khi xe đi chậm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 149,
+    "content": "Khi lái xe ô tô trên đường đèo dốc, xe từ dưới lên và xe từ trên xuống gặp nhau ở đoạn hẹp, xe nào phải nhường đường?",
+    "options": {
+      "A": "Xe đi lên nhường xe đi xuống.",
+      "B": "Xe đi xuống nhường xe đi lên.",
+      "C": "Xe đến sau nhường xe đến trước."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 150,
+    "content": "Xe ô tô tải, xe buýt khi tham gia giao thông phải gắn phù hiệu, biển hiệu gì theo quy định?",
+    "options": {
+      "A": "Không bắt buộc.",
+      "B": "Phải có phù hiệu/biển hiệu phù hợp theo loại hình kinh doanh vận tải và quy định của cơ quan quản lý.",
+      "C": "Chỉ cần biển số xe là đủ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 151,
+    "content": "Khi điều khiển xe ô tô và nhận thấy xe mình đang bị bám theo hoặc có tình huống bất an, người lái xe nên làm gì?",
+    "options": {
+      "A": "Tăng tốc để thoát khỏi.",
+      "B": "Lái đến đồn cảnh sát hoặc nơi đông người, gọi cảnh sát khi an toàn.",
+      "C": "Dừng xe và đối mặt với tình huống."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 152,
+    "content": "Khi điều khiển xe ô tô trên đường bộ, người lái xe phát hiện một vật cản bất ngờ ngay trước xe, cần ưu tiên xử lý theo thứ tự nào?",
+    "options": {
+      "A": "Đánh lái, rồi mới đạp phanh.",
+      "B": "Tùy tình huống: nếu còn khoảng cách đủ thì phanh; nếu không đủ thì kết hợp phanh và tránh sang phải.",
+      "C": "Nhắm mắt và đạp phanh hết lực."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 153,
+    "content": "Xe ô tô con có được phép vào làn khẩn cấp trên đường cao tốc không?",
+    "options": {
+      "A": "Được phép khi kẹt xe nghiêm trọng.",
+      "B": "Không được phép, làn khẩn cấp chỉ dành cho xe hỏng và xe cứu hộ, cứu thương.",
+      "C": "Được phép khi đi với tốc độ thấp."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 154,
+    "content": "Khi điều khiển xe ô tô, người lái xe phát hiện có bộ phận của xe bị hỏng nhưng vẫn có thể di chuyển, người lái xe phải làm gì?",
+    "options": {
+      "A": "Tiếp tục đi và sửa sau.",
+      "B": "Tùy mức độ nguy hiểm: nếu ảnh hưởng đến an toàn giao thông phải dừng xe sửa chữa ngay.",
+      "C": "Chỉ dừng lại khi bộ phận đó hoàn toàn hỏng."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 155,
+    "content": "Khi lái xe ô tô, người lái xe gặp tình huống xe phía trước phanh gấp đột ngột, phải làm gì?",
+    "options": {
+      "A": "Bấm còi để cảnh báo xe phía trước.",
+      "B": "Đạp phanh ngay lập tức, đánh lái tránh nếu không dừng được kịp.",
+      "C": "Chuyển sang làn bên trái để vượt qua."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 156,
+    "content": "Khi điều khiển xe ô tô con chở trẻ em, người lái xe cần đặt ghế ngồi an toàn cho trẻ ở vị trí nào an toàn nhất?",
+    "options": {
+      "A": "Hàng ghế trước, bên ghế phụ.",
+      "B": "Hàng ghế sau, không được để trẻ ngồi hàng ghế trước trừ xe chỉ có một hàng ghế.",
+      "C": "Bất kỳ vị trí nào cũng an toàn như nhau."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 157,
+    "content": "Khi điều khiển xe ô tô, người lái xe có thể bị tước giấy phép lái xe trong trường hợp nào?",
+    "options": {
+      "A": "Chỉ khi gây tai nạn.",
+      "B": "Khi vi phạm các lỗi nghiêm trọng như: uống rượu bia lái xe, chạy quá tốc độ nhiều, gây tai nạn bỏ trốn, và các vi phạm nặng khác theo quy định.",
+      "C": "Chỉ khi bị kết án hình sự."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 158,
+    "content": "Người lái xe ô tô phải cất giấy phép lái xe ở đâu khi điều khiển xe?",
+    "options": {
+      "A": "Trong hộp đựng đồ trên xe.",
+      "B": "Mang theo người, sẵn sàng xuất trình khi có yêu cầu kiểm tra.",
+      "C": "Để ở nhà cho an toàn, chỉ mang bản sao."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 159,
+    "content": "Khi điều khiển xe ô tô, gặp biển báo 'Giao nhau với đường ưu tiên', người lái xe phải xử lý như thế nào?",
+    "options": {
+      "A": "Đi bình thường vì đang trên đường lớn.",
+      "B": "Nhường đường cho xe đi trên đường ưu tiên, chỉ đi khi an toàn.",
+      "C": "Bấm còi và đi qua."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 160,
+    "content": "Xe ô tô tải khi chở vật liệu xây dựng rời (cát, đất, đá...) phải đảm bảo điều kiện gì?",
+    "options": {
+      "A": "Chỉ cần không đổ hàng ra đường.",
+      "B": "Phải che phủ kín bằng bạt hoặc lưới chắn để tránh rơi vãi hàng hóa ra đường.",
+      "C": "Không có quy định cụ thể."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 161,
+    "content": "Khi điều khiển xe ô tô, người lái xe phải sử dụng đèn xi nhan khi nào?",
+    "options": {
+      "A": "Chỉ khi rẽ phải.",
+      "B": "Khi rẽ, chuyển làn, vượt xe, dừng đỗ vào lề đường, quay đầu xe.",
+      "C": "Chỉ khi đang trên đường cao tốc."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 162,
+    "content": "Khi điều khiển xe ô tô đến gần đường giao nhau không có tín hiệu ưu tiên, người lái xe phải làm gì?",
+    "options": {
+      "A": "Đi nhanh qua để tránh gây ách tắc.",
+      "B": "Giảm tốc độ, quan sát và áp dụng quy tắc nhường đường (nhường xe từ bên phải).",
+      "C": "Bấm còi để xe khác nhường đường."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 163,
+    "content": "Khi lái xe ô tô, người lái xe gặp đoạn đường có biển cảnh báo 'Đường trơn', cần làm gì?",
+    "options": {
+      "A": "Đi bình thường nhưng chú ý hơn.",
+      "B": "Giảm tốc độ trước khi vào đoạn đường trơn, tránh phanh và tăng ga đột ngột.",
+      "C": "Chỉ cần bơm căng lốp là đủ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 164,
+    "content": "Khi điều khiển xe ô tô, người lái xe có được phép vượt qua đường sắt khi chuông đang reo và đèn đỏ đang nhấp nháy không?",
+    "options": {
+      "A": "Được nếu không thấy tàu.",
+      "B": "Không được, phải dừng lại và chờ đến khi đèn tắt, chuông ngừng và an toàn.",
+      "C": "Được nếu vượt nhanh."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 165,
+    "content": "Người lái xe ô tô cần làm gì để phòng ngừa mệt mỏi khi lái xe đường dài?",
+    "options": {
+      "A": "Uống nhiều cà phê và nước tăng lực.",
+      "B": "Dừng nghỉ ngơi định kỳ (ít nhất 15 phút sau mỗi 4 giờ lái liên tục), ăn nhẹ, giữ không khí trong xe thoáng.",
+      "C": "Nghe nhạc to để tỉnh táo."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 166,
+    "content": "Khi lái xe ô tô, người lái xe nhìn thấy biển báo 'Đường cấm' (hình tròn nền đỏ có vạch ngang trắng), phải làm gì?",
+    "options": {
+      "A": "Có thể vào nếu không có xe ngược chiều.",
+      "B": "Không được đi vào đường đó, phải tìm đường khác.",
+      "C": "Đi chậm và cẩn thận khi đi vào."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 167,
+    "content": "Theo quy định hiện hành, giấy phép lái xe ô tô hạng B2 có thời hạn bao lâu?",
+    "options": {
+      "A": "3 năm.",
+      "B": "5 năm.",
+      "C": "Vĩnh viễn (không có thời hạn)."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 168,
+    "content": "Khi điều khiển xe ô tô, người lái xe gặp biển báo 'Cấm vào' (hình tròn nền đỏ viền trắng), xe nào được phép đi vào?",
+    "options": {
+      "A": "Xe cứu thương và xe cứu hỏa.",
+      "B": "Không có loại xe nào được vào trừ xe có biển cho phép đặc biệt.",
+      "C": "Chỉ xe tải hạng nặng."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 169,
+    "content": "Xe ô tô khi chạy trên đường có biển báo 'Tốc độ tối thiểu', người lái xe phải đảm bảo tốc độ như thế nào?",
+    "options": {
+      "A": "Không được đi dưới tốc độ ghi trên biển.",
+      "B": "Tốc độ tối thiểu chỉ là khuyến nghị.",
+      "C": "Chỉ áp dụng cho xe tải nặng."
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 170,
+    "content": "Khi điều khiển xe ô tô, người lái xe phải nhường đường cho loại xe nào dưới đây khi đang đi trên đường ưu tiên?",
+    "options": {
+      "A": "Không cần nhường đường cho bất kỳ xe nào vì đang trên đường ưu tiên.",
+      "B": "Vẫn phải nhường đường cho xe ưu tiên (xe cứu thương, cứu hỏa, cảnh sát đang làm nhiệm vụ khẩn cấp).",
+      "C": "Chỉ nhường khi xe ưu tiên đi ngược chiều."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 171,
+    "content": "Khi lái xe ô tô tải trên đường dốc xuống, người lái xe nên dùng số mấy để an toàn?",
+    "options": {
+      "A": "Số cao để tiết kiệm nhiên liệu.",
+      "B": "Cùng số hoặc số thấp hơn so với khi đi lên dốc đó để sử dụng phanh động cơ.",
+      "C": "Số trung gian và dùng phanh liên tục."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 172,
+    "content": "Xe ô tô tham gia giao thông đường bộ bắt buộc phải có giấy tờ gì?",
+    "options": {
+      "A": "Chỉ cần giấy đăng ký xe.",
+      "B": "Giấy đăng ký xe, giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường (còn hạn), giấy chứng nhận bảo hiểm trách nhiệm dân sự.",
+      "C": "Chỉ cần giấy phép lái xe của người lái."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 173,
+    "content": "Khi điều khiển xe ô tô, phát hiện xe phía trước ra tín hiệu xi nhan phải, người lái xe phía sau cần làm gì?",
+    "options": {
+      "A": "Tăng tốc để vượt qua xe đó.",
+      "B": "Giảm tốc và giữ khoảng cách an toàn, chuẩn bị cho xe trước dừng hoặc rẽ phải.",
+      "C": "Bấm còi để xe trước biết có xe phía sau."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 174,
+    "content": "Theo quy định, người lái xe ô tô kinh doanh vận tải hành khách phải nghỉ ít nhất bao nhiêu tiếng liên tục sau mỗi ca lái xe?",
+    "options": {
+      "A": "4 giờ.",
+      "B": "6 giờ.",
+      "C": "Theo quy định của pháp luật về thời gian làm việc của người lái xe kinh doanh vận tải."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 175,
+    "content": "Khi điều khiển xe ô tô tải chở hàng siêu trường siêu trọng vào ban đêm, xe phải có gì?",
+    "options": {
+      "A": "Chỉ cần bật đèn pha.",
+      "B": "Phải có giấy phép lưu hành đặc biệt, xe hộ tống, đèn cảnh báo và thực hiện đúng theo nội dung giấy phép.",
+      "C": "Chỉ cần đèn cảnh báo màu vàng."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 176,
+    "content": "Khi lái xe ô tô con ở vận tốc 80 km/h, quãng đường phanh dừng (từ lúc nhìn thấy chướng ngại vật đến khi xe dừng hẳn) thường là bao nhiêu mét trong điều kiện đường khô, xe tốt?",
+    "options": {
+      "A": "Khoảng 20 mét.",
+      "B": "Khoảng 50-60 mét (bao gồm quãng đường phản ứng và phanh).",
+      "C": "Khoảng 10 mét."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 177,
+    "content": "Xe ô tô khi bị hư hỏng giữa đường và không thể di chuyển, người lái xe không bắt buộc phải làm điều gì?",
+    "options": {
+      "A": "Bật đèn khẩn cấp.",
+      "B": "Chụp ảnh xe ngay tại chỗ trước khi di chuyển.",
+      "C": "Đặt biển cảnh báo nguy hiểm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 178,
+    "content": "Khi điều khiển xe ô tô, người lái xe cần chú ý điều gì khi gặp người điều khiển xe đạp trên đường?",
+    "options": {
+      "A": "Xe đạp phải tự tránh xe ô tô.",
+      "B": "Giữ khoảng cách an toàn, giảm tốc khi đi qua, đặc biệt chú ý khi vượt xe đạp.",
+      "C": "Bấm còi để xe đạp biết có xe ô tô đang đến."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 179,
+    "content": "Người lái xe ô tô phạm lỗi gì khi đỗ xe trước cổng bệnh viện, trường học, cổng trụ sở cơ quan?",
+    "options": {
+      "A": "Không vi phạm nếu đỗ dưới 30 phút.",
+      "B": "Vi phạm quy định về dừng đỗ xe, có thể bị xử phạt vi phạm hành chính.",
+      "C": "Chỉ vi phạm nếu có biển cấm đỗ cụ thể."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 180,
+    "content": "Khi lái xe ô tô, người lái xe không được vượt xe phía trước trong trường hợp nào dưới đây?",
+    "options": {
+      "A": "Khi đang đi trên đường thẳng có vạch đứt giữa đường.",
+      "B": "Khi xe phía trước đang vượt xe khác, khi xe đang đến gần đỉnh dốc, khi có biển cấm vượt.",
+      "C": "Khi đang trên đường có 2 làn cùng chiều."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 181,
+    "content": "Khi điều khiển xe ô tô con, người lái xe phải thực hiện việc đăng kiểm lần đầu sau bao lâu kể từ khi xe xuất xưởng?",
+    "options": {
+      "A": "Sau 1 năm.",
+      "B": "Theo quy định hiện hành của pháp luật về kiểm định phương tiện giao thông.",
+      "C": "Sau 3 năm."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 182,
+    "content": "Khi điều khiển xe ô tô trên đường, người lái xe phát hiện mình đang bị mất phương hướng hoặc không biết đường, nên làm gì?",
+    "options": {
+      "A": "Dừng xe giữa đường để xem bản đồ.",
+      "B": "Tìm nơi an toàn để dừng xe vào lề đường, sau đó xem bản đồ hoặc hỏi đường.",
+      "C": "Đi bất kỳ hướng nào và hỏi đường sau."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 183,
+    "content": "Xe ô tô con sử dụng loại nhiên liệu nào thì cần kiểm tra nồng độ khí thải theo tiêu chuẩn Euro?",
+    "options": {
+      "A": "Chỉ xe diesel.",
+      "B": "Cả xe chạy xăng và diesel đều phải kiểm tra khí thải theo tiêu chuẩn hiện hành.",
+      "C": "Chỉ xe nhập khẩu."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 184,
+    "content": "Khi lái xe ô tô, người lái xe bị buồn ngủ cần dừng xe nghỉ ngơi. Trong khi chờ tỉnh táo, người lái xe có thể làm gì an toàn?",
+    "options": {
+      "A": "Bật điều hòa nhiệt độ và tiếp tục lái xe.",
+      "B": "Dừng xe vào nơi an toàn, nghỉ ngơi ngắn (power nap) khoảng 15-20 phút.",
+      "C": "Uống cà phê và tiếp tục lái."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 185,
+    "content": "Khi lái xe ô tô trên đường cao tốc, người lái xe có được phép dừng lại để cho hành khách nghỉ ngơi, mua đồ ăn không?",
+    "options": {
+      "A": "Được dừng ở bất kỳ chỗ nào nếu có lý do chính đáng.",
+      "B": "Chỉ được dừng tại các trạm dừng nghỉ quy định trên đường cao tốc.",
+      "C": "Được dừng ở làn khẩn cấp nếu nhanh thôi."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 186,
+    "content": "Khi điều khiển xe ô tô, người lái xe phải luôn nhớ điều gì để đảm bảo an toàn cho người ngồi sau?",
+    "options": {
+      "A": "Điều chỉnh tốc độ phù hợp.",
+      "B": "Nhắc nhở hành khách thắt dây an toàn (đối với xe có dây an toàn ở hàng ghế sau) và không mở cửa xe khi xe đang chạy.",
+      "C": "Tránh phanh đột ngột."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 187,
+    "content": "Xe ô tô khi tham gia giao thông bắt buộc phải mua loại bảo hiểm nào?",
+    "options": {
+      "A": "Bảo hiểm vật chất thân xe.",
+      "B": "Bảo hiểm trách nhiệm dân sự của chủ xe cơ giới (bảo hiểm bắt buộc).",
+      "C": "Bảo hiểm toàn diện."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 188,
+    "content": "Khi điều khiển xe ô tô đến đoạn đường ngập lũ chưa rõ độ sâu, người lái xe phải làm gì?",
+    "options": {
+      "A": "Đi thật chậm qua để thử.",
+      "B": "Không được đi qua khi chưa biết rõ độ sâu; nếu độ sâu hơn ngưỡng an toàn của xe thì tìm đường khác.",
+      "C": "Tăng tốc để qua nhanh."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 189,
+    "content": "Khi điều khiển xe ô tô trên đường trơn có tuyết, người lái xe cần làm gì?",
+    "options": {
+      "A": "Tăng tốc vì tuyết ít ảnh hưởng đến xe ô tô.",
+      "B": "Giảm tốc độ đáng kể, tăng khoảng cách an toàn gấp nhiều lần, tránh phanh và tăng ga đột ngột, sử dụng xích lốp nếu cần.",
+      "C": "Đi bình thường nhưng chú ý hơn."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 190,
+    "content": "Khi lái xe ô tô, người lái xe phát hiện đèn cảnh báo ắc quy/sạc pin sáng đỏ, cần làm gì?",
+    "options": {
+      "A": "Tiếp tục đi đến điểm đến rồi sửa.",
+      "B": "Giảm thiểu sử dụng điện trên xe (tắt điều hòa, đèn không cần thiết), đến ngay gara sửa chữa vì hệ thống sạc có vấn đề.",
+      "C": "Tắt máy và bật lại để reset."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 191,
+    "content": "Khi điều khiển xe ô tô trong đô thị, người lái xe có thái độ văn hóa giao thông tốt sẽ ứng xử như thế nào khi bị kẹt xe?",
+    "options": {
+      "A": "Bấm còi liên tục để thúc giục xe phía trước di chuyển.",
+      "B": "Kiên nhẫn chờ đợi, không lấn làn, không leo lề, không bấm còi ầm ĩ.",
+      "C": "Tìm mọi cách vượt lên trước kể cả đi ngược chiều."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 192,
+    "content": "Khi điều khiển xe ô tô, người lái xe có thái độ đúng mực sẽ xử lý như thế nào khi người khác phóng ẩu hoặc cắt ngang mình?",
+    "options": {
+      "A": "Đuổi theo và cự cãi.",
+      "B": "Giữ bình tĩnh, không trả đũa, giảm tốc và duy trì khoảng cách an toàn.",
+      "C": "Bấm còi và chửi bới."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 193,
+    "content": "Theo nguyên tắc phòng thủ khi lái xe ô tô, người lái xe cần làm gì để phòng tránh tai nạn?",
+    "options": {
+      "A": "Chỉ tuân thủ luật giao thông là đủ.",
+      "B": "Luôn dự đoán các nguy hiểm tiềm ẩn, giữ khoảng cách an toàn, không tin tưởng hoàn toàn vào hành vi của xe khác.",
+      "C": "Chạy theo tốc độ của xe xung quanh."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 194,
+    "content": "Khi lái xe ô tô, người lái xe nên kiểm tra gương chiếu hậu bao lâu một lần để đảm bảo an toàn?",
+    "options": {
+      "A": "Mỗi 5 phút.",
+      "B": "Thường xuyên, mỗi 5-8 giây quét qua gương một lần tùy điều kiện giao thông.",
+      "C": "Chỉ khi cần dừng xe hoặc rẽ."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 195,
+    "content": "Khi điều khiển xe ô tô con, người lái xe đỗ xe trên đường dốc lên (đầu xe hướng lên dốc), phải xoay bánh xe về phía nào?",
+    "options": {
+      "A": "Xoay về phía ngoài (ra xa lề đường).",
+      "B": "Xoay về phía lề đường (vào trong) để nếu phanh hỏng xe sẽ tì vào lề.",
+      "C": "Giữ thẳng bánh và dùng phanh tay."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 196,
+    "content": "Xe ô tô con không có biển số xe hoặc biển số xe không đúng quy định thì có được phép lưu hành không?",
+    "options": {
+      "A": "Được lưu hành trong phạm vi ngắn.",
+      "B": "Không được phép lưu hành.",
+      "C": "Được lưu hành nếu có giải thích lý do."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 197,
+    "content": "Khi lái xe ô tô đến ngã tư, thấy đèn tín hiệu xanh vừa bật sáng, người lái xe cần làm gì?",
+    "options": {
+      "A": "Tăng tốc ngay để nhanh chóng qua ngã tư.",
+      "B": "Quan sát kỹ, đặc biệt chú ý xe chạy nhanh có thể vượt đèn vàng từ hướng khác, rồi mới đi.",
+      "C": "Đi ngay vì đèn xanh là quyền ưu tiên."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 198,
+    "content": "Khi điều khiển xe ô tô, người lái xe có được dùng đèn khẩn cấp (đèn 4 nháy) liên tục khi đang di chuyển không?",
+    "options": {
+      "A": "Được dùng khi muốn báo hiệu cho xe khác nhường đường.",
+      "B": "Chỉ dùng khi xe gặp sự cố, khi kéo xe, khi trời mưa lớn hoặc sương mù, không dùng như tín hiệu cảm ơn hay xin đường.",
+      "C": "Được dùng trong mọi trường hợp."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 199,
+    "content": "Theo quy định về an toàn giao thông, xe ô tô chở người từ bao nhiêu chỗ ngồi trở lên phải lắp thiết bị giám sát hành trình?",
+    "options": {
+      "A": "Từ 5 chỗ ngồi trở lên.",
+      "B": "Từ 8 chỗ ngồi trở lên (không kể chỗ của người lái xe) đối với xe kinh doanh vận tải.",
+      "C": "Tất cả xe đều phải lắp."
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 200,
+    "content": "Người lái xe ô tô có văn hóa giao thông và ý thức trách nhiệm cao sẽ ứng xử như thế nào khi chứng kiến vụ tai nạn giao thông?",
+    "options": {
+      "A": "Quay phim chụp ảnh và đăng lên mạng xã hội.",
+      "B": "Dừng xe an toàn, hỗ trợ nạn nhân trong khả năng, gọi 113 và 115, bảo vệ hiện trường, không tự ý di chuyển thi thể nếu không cần thiết.",
+      "C": "Lái nhanh qua để không bị liên đới."
+    },
+    "correctAnswer": "B"
+  }
+]

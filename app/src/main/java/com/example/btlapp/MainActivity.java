@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Initialize database and load B1 questions from assets
+        // Initialize database and load questions from assets
         initDatabase();
 
         Button btnMotorbike = findViewById(R.id.btnMotorbike);
@@ -61,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
         // Load B1 questions from JSON assets
         if (db.getQuestionsByClass("B1").isEmpty()) {
             loadQuestionsFromJson(db, "questions_b1.json", "B1");
+        }
+
+        // Load B2 questions from JSON assets
+        if (db.getQuestionsByClass("B2").isEmpty()) {
+            loadQuestionsFromJson(db, "questions_b2.json", "B2");
         }
 
         if (db.getAllTrafficSigns().isEmpty()) {

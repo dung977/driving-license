@@ -1,5 +1,7 @@
 package com.example.btlapp;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -7,21 +9,30 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class TheoryActivity extends AppCompatActivity {
 
-    private List<Question> questions;
+    private List<Question> allQuestions;
+    private List<Question> displayedQuestions;
     private int currentIndex = 0;
     private DatabaseHelper dbHelper;
     private Map<Integer, Integer> userAnswers = new HashMap<>(); 
+    private String currentFilter = "ALL";
+    private String licenseClass;
 
     private TextView tvQuestionCount;
     private TextView tvQuestionContent;
@@ -32,10 +43,11 @@ public class TheoryActivity extends AppCompatActivity {
     private RadioButton rbOptionC;
     private RadioButton rbOptionD;
     private TextView tvExplanation;
-    private View btnPrevious; // Changed to View because it's a LinearLayout in new layout
-    private View btnNext;     // Changed to View because it's a LinearLayout in new layout
+    private View btnPrevious;
+    private View btnNext;
     private ImageView btnBack;
     private TextView tvToolbarTitle;
+    private TextView tvFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +66,7 @@ public class TheoryActivity extends AppCompatActivity {
         displayQuestion();
 
         btnNext.setOnClickListener(v -> {
-            if (questions != null && currentIndex < questions.size() - 1) {
+            if (displayedQuestions != null && currentIndex < displayedQuestions.size() - 1) {
                 currentIndex++;
                 displayQuestion();
             }
@@ -68,6 +80,8 @@ public class TheoryActivity extends AppCompatActivity {
         });
 
         btnBack.setOnClickListener(v -> finish());
+
+        tvFilter.setOnClickListener(v -> showFilterDialog());
 
         rgOptions.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId != -1) {
@@ -91,14 +105,40 @@ public class TheoryActivity extends AppCompatActivity {
         btnNext = findViewById(R.id.btnNext);
         btnBack = findViewById(R.id.btnBack);
         tvToolbarTitle = findViewById(R.id.tvToolbarTitle);
+        tvFilter = findViewById(R.id.tvFilter);
     }
 
     private void loadData() {
-        String licenseClass = getIntent().getStringExtra("LICENSE_CLASS");
+        licenseClass = getIntent().getStringExtra("LICENSE_CLASS");
         if (licenseClass == null) licenseClass = "A1";
         
         tvToolbarTitle.setText("Ôn thi hạng " + licenseClass);
-        questions = dbHelper.getQuestionsByClass(licenseClass);
+        applyFilter("ALL");
+    }
+
+    private void applyFilter(String filterType) {
+        currentFilter = filterType;
+        displayedQuestions = dbHelper.getFilteredQuestions(licenseClass, filterType);
+        currentIndex = 0;
+        
+        if (displayedQuestions.isEmpty()) {
+            Toast.makeText(this, "Không có câu hỏi nào khớp với bộ lọc", Toast.LENGTH_SHORT).show();
+            // Optional: reset to ALL if no questions found
+        }
+        displayQuestion();
+    }
+
+    private void showFilterDialog() {
+        String[] options = {"Tất cả", "Đã làm", "Chưa làm", "Câu sai", "Câu đúng", "Câu có biển báo"};
+        String[] filterKeys = {"ALL", "DONE", "NOT_DONE", "WRONG", "CORRECT", "HAS_IMAGE"};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Chọn bộ lọc");
+        builder.setItems(options, (dialog, which) -> {
+            applyFilter(filterKeys[which]);
+            tvFilter.setText(options[which]);
+        });
+        builder.show();
     }
 
     private void saveCurrentAnswer(int checkedId) {
@@ -108,34 +148,47 @@ public class TheoryActivity extends AppCompatActivity {
         else if (checkedId == R.id.rbOptionC) answer = 3;
         else if (checkedId == R.id.rbOptionD) answer = 4;
         
-        userAnswers.put(currentIndex, answer);
+        Question q = displayedQuestions.get(currentIndex);
+        userAnswers.put(q.getId(), answer);
+        dbHelper.updateUserAnswer(q.getId(), answer);
     }
 
     private void displayQuestion() {
-        if (questions == null || questions.isEmpty()) {
-            tvQuestionContent.setText("Không có dữ liệu câu hỏi.");
+        if (displayedQuestions == null || displayedQuestions.isEmpty()) {
+            tvQuestionContent.setText("Không có dữ liệu câu hỏi cho bộ lọc này.");
+            tvQuestionCount.setText("0/0");
+            ivQuestionImage.setVisibility(View.GONE);
+            rgOptions.setVisibility(View.GONE);
+            tvExplanation.setVisibility(View.GONE);
             return;
         }
 
-        Question question = questions.get(currentIndex);
-        tvQuestionCount.setText("Câu " + (currentIndex + 1) + "/" + questions.size());
+        rgOptions.setVisibility(View.VISIBLE);
+        Question question = displayedQuestions.get(currentIndex);
+        tvQuestionCount.setText("Câu " + (currentIndex + 1) + "/" + displayedQuestions.size());
         tvQuestionContent.setText(question.getContent());
         
-        // Handle Image
-        if (question.getImageResId() != null && question.getImageResId() != 0) {
-            ivQuestionImage.setVisibility(View.VISIBLE);
-            ivQuestionImage.setImageResource(question.getImageResId());
+        // Image logic
+        if (question.getImageName() != null && !question.getImageName().isEmpty()) {
+            try {
+                InputStream is = getAssets().open("images/carb1/" + question.getImageName());
+                Bitmap bitmap = BitmapFactory.decodeStream(is);
+                ivQuestionImage.setImageBitmap(bitmap);
+                ivQuestionImage.setVisibility(View.VISIBLE);
+                is.close();
+            } catch (IOException e) {
+                ivQuestionImage.setVisibility(View.GONE);
+            }
         } else {
             ivQuestionImage.setVisibility(View.GONE);
         }
 
-        // Reset text color
+        // Reset
         rbOptionA.setTextColor(Color.BLACK);
         rbOptionB.setTextColor(Color.BLACK);
         rbOptionC.setTextColor(Color.BLACK);
         rbOptionD.setTextColor(Color.BLACK);
 
-        // Display answers
         rbOptionA.setText("1. " + question.getOptionA());
         rbOptionB.setText("2. " + question.getOptionB());
         
@@ -153,15 +206,15 @@ public class TheoryActivity extends AppCompatActivity {
             rbOptionD.setVisibility(View.GONE);
         }
 
-        // Restore previous answer
+        // Restore answer from DB
+        int savedAns = dbHelper.getUserAnswer(question.getId());
         rgOptions.setOnCheckedChangeListener(null);
         rgOptions.clearCheck();
-        Integer savedAnswer = userAnswers.get(currentIndex);
-        if (savedAnswer != null) {
-            if (savedAnswer == 1) rbOptionA.setChecked(true);
-            else if (savedAnswer == 2) rbOptionB.setChecked(true);
-            else if (savedAnswer == 3) rbOptionC.setChecked(true);
-            else if (savedAnswer == 4) rbOptionD.setChecked(true);
+        if (savedAns != 0) {
+            if (savedAns == 1) rbOptionA.setChecked(true);
+            else if (savedAns == 2) rbOptionB.setChecked(true);
+            else if (savedAns == 3) rbOptionC.setChecked(true);
+            else if (savedAns == 4) rbOptionD.setChecked(true);
             showResultAndExplanation();
         } else {
             tvExplanation.setVisibility(View.GONE);
@@ -176,19 +229,17 @@ public class TheoryActivity extends AppCompatActivity {
     }
 
     private void showResultAndExplanation() {
-        Question question = questions.get(currentIndex);
+        Question question = displayedQuestions.get(currentIndex);
         int correctAnswer = question.getCorrectAnswer();
-        Integer userAnswer = userAnswers.get(currentIndex);
+        int userAnswer = dbHelper.getUserAnswer(question.getId());
 
-        if (userAnswer == null) return;
+        if (userAnswer == 0) return;
 
-        // Highlight correct answer in Green
         if (correctAnswer == 1) rbOptionA.setTextColor(Color.parseColor("#2E7D32"));
         else if (correctAnswer == 2) rbOptionB.setTextColor(Color.parseColor("#2E7D32"));
         else if (correctAnswer == 3) rbOptionC.setTextColor(Color.parseColor("#2E7D32"));
         else if (correctAnswer == 4) rbOptionD.setTextColor(Color.parseColor("#2E7D32"));
 
-        // Highlight wrong user answer in Red
         if (userAnswer != correctAnswer) {
             if (userAnswer == 1) rbOptionA.setTextColor(Color.RED);
             else if (userAnswer == 2) rbOptionB.setTextColor(Color.RED);
@@ -196,7 +247,6 @@ public class TheoryActivity extends AppCompatActivity {
             else if (userAnswer == 4) rbOptionD.setTextColor(Color.RED);
         }
 
-        // Show Explanation
         String explanation = question.getExplanation();
         tvExplanation.setVisibility(View.VISIBLE);
         if (explanation != null && !explanation.trim().isEmpty()) {

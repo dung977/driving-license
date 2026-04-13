@@ -12,7 +12,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "driving_license.db";
-    private static final int DATABASE_VERSION = 2; // Incremented version
+    private static final int DATABASE_VERSION = 4; // Upgraded version for user progress
 
     // Table Questions
     private static final String TABLE_QUESTIONS = "questions";
@@ -24,9 +24,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_Q_OPTION_D = "option_d";
     private static final String COLUMN_Q_CORRECT_ANSWER = "correct_answer";
     private static final String COLUMN_Q_EXPLANATION = "explanation";
-    private static final String COLUMN_Q_IMAGE_RES_ID = "image_res_id";
+    private static final String COLUMN_Q_IMAGE_NAME = "image_name";
     private static final String COLUMN_Q_IS_CRITICAL = "is_critical";
-    private static final String COLUMN_Q_LICENSE_CLASS = "license_class"; // A1, B1, etc.
+    private static final String COLUMN_Q_LICENSE_CLASS = "license_class";
+    
+    // New columns for user progress
+    private static final String COLUMN_Q_USER_ANSWER = "user_answer"; // 0: none, 1-4: chosen
+    private static final String COLUMN_Q_IS_ANSWERED = "is_answered"; // 0: no, 1: yes
 
     // Table Traffic Signs
     private static final String TABLE_SIGNS = "traffic_signs";
@@ -50,9 +54,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_Q_OPTION_D + " TEXT, " +
                 COLUMN_Q_CORRECT_ANSWER + " INTEGER, " +
                 COLUMN_Q_EXPLANATION + " TEXT, " +
-                COLUMN_Q_IMAGE_RES_ID + " INTEGER, " +
+                COLUMN_Q_IMAGE_NAME + " TEXT, " +
                 COLUMN_Q_IS_CRITICAL + " INTEGER, " +
-                COLUMN_Q_LICENSE_CLASS + " TEXT)";
+                COLUMN_Q_LICENSE_CLASS + " TEXT, " +
+                COLUMN_Q_USER_ANSWER + " INTEGER DEFAULT 0, " +
+                COLUMN_Q_IS_ANSWERED + " INTEGER DEFAULT 0)";
 
         String createSignsTable = "CREATE TABLE " + TABLE_SIGNS + " (" +
                 COLUMN_S_NAME + " TEXT, " +
@@ -66,15 +72,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUESTIONS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SIGNS);
-        onCreate(db);
+        if (oldVersion < 4) {
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUESTIONS);
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_SIGNS);
+            onCreate(db);
+        }
     }
 
     public void addQuestion(Question question, String licenseClass) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        // values.put(COLUMN_Q_ID, question.getId()); // Let DB handle ID or keep it fixed
         values.put(COLUMN_Q_CONTENT, question.getContent());
         values.put(COLUMN_Q_OPTION_A, question.getOptionA());
         values.put(COLUMN_Q_OPTION_B, question.getOptionB());
@@ -82,20 +89,51 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_Q_OPTION_D, question.getOptionD());
         values.put(COLUMN_Q_CORRECT_ANSWER, question.getCorrectAnswer());
         values.put(COLUMN_Q_EXPLANATION, question.getExplanation());
-        values.put(COLUMN_Q_IMAGE_RES_ID, question.getImageResId());
+        values.put(COLUMN_Q_IMAGE_NAME, question.getImageName());
         values.put(COLUMN_Q_IS_CRITICAL, question.isCritical() ? 1 : 0);
         values.put(COLUMN_Q_LICENSE_CLASS, licenseClass);
 
         db.insert(TABLE_QUESTIONS, null, values);
     }
 
-    public List<Question> getQuestionsByClass(String licenseClass) {
+    public void updateUserAnswer(int questionId, int userAnswer) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_Q_USER_ANSWER, userAnswer);
+        values.put(COLUMN_Q_IS_ANSWERED, 1);
+        db.update(TABLE_QUESTIONS, values, COLUMN_Q_ID + "=?", new String[]{String.valueOf(questionId)});
+    }
+
+    public List<Question> getFilteredQuestions(String licenseClass, String filterType) {
         List<Question> questionList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
         
-        // Search by class (e.g., "B1")
-        Cursor cursor = db.query(TABLE_QUESTIONS, null, COLUMN_Q_LICENSE_CLASS + "=?",
-                new String[]{licenseClass}, null, null, null);
+        String selection = COLUMN_Q_LICENSE_CLASS + "=?";
+        List<String> selectionArgs = new ArrayList<>();
+        selectionArgs.add(licenseClass);
+
+        switch (filterType) {
+            case "DONE":
+                selection += " AND " + COLUMN_Q_IS_ANSWERED + "=1";
+                break;
+            case "NOT_DONE":
+                selection += " AND " + COLUMN_Q_IS_ANSWERED + "=0";
+                break;
+            case "WRONG":
+                selection += " AND " + COLUMN_Q_IS_ANSWERED + "=1 AND " + COLUMN_Q_USER_ANSWER + "!=" + COLUMN_Q_CORRECT_ANSWER;
+                break;
+            case "CORRECT":
+                selection += " AND " + COLUMN_Q_IS_ANSWERED + "=1 AND " + COLUMN_Q_USER_ANSWER + "==" + COLUMN_Q_CORRECT_ANSWER;
+                break;
+            case "HAS_IMAGE":
+                selection += " AND (" + COLUMN_Q_IMAGE_NAME + " IS NOT NULL AND " + COLUMN_Q_IMAGE_NAME + " != '')";
+                break;
+            default: // ALL
+                break;
+        }
+
+        Cursor cursor = db.query(TABLE_QUESTIONS, null, selection,
+                selectionArgs.toArray(new String[0]), null, null, null);
 
         if (cursor.moveToFirst()) {
             do {
@@ -108,14 +146,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_Q_OPTION_D)),
                         cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_Q_CORRECT_ANSWER)),
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_Q_EXPLANATION)),
-                        cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_Q_IMAGE_RES_ID)),
+                        null,
+                        cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_Q_IMAGE_NAME)),
                         cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_Q_IS_CRITICAL)) == 1
                 );
+                // We can set the user answer if we add a field to Question class, or handle it in activity
                 questionList.add(question);
             } while (cursor.moveToNext());
         }
         cursor.close();
         return questionList;
+    }
+
+    // Existing methods kept for compatibility
+    public List<Question> getQuestionsByClass(String licenseClass) {
+        return getFilteredQuestions(licenseClass, "ALL");
+    }
+
+    public int getUserAnswer(int questionId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABLE_QUESTIONS, new String[]{COLUMN_Q_USER_ANSWER}, COLUMN_Q_ID + "=?",
+                new String[]{String.valueOf(questionId)}, null, null, null);
+        int answer = 0;
+        if (cursor.moveToFirst()) {
+            answer = cursor.getInt(0);
+        }
+        cursor.close();
+        return answer;
     }
 
     public void addTrafficSign(TrafficSign sign) {

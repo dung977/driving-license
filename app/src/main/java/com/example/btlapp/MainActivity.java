@@ -83,19 +83,22 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject obj = jsonArray.getJSONObject(i);
                 
-                // Parse options object from your JSON format
+                // Parse options object
                 JSONObject optionsObj = obj.getJSONObject("options");
                 String optionA = optionsObj.optString("A", "");
                 String optionB = optionsObj.optString("B", "");
                 String optionC = optionsObj.optString("C", "");
                 String optionD = optionsObj.optString("D", null);
                 
-                // Map correctAnswer "A", "B", "C", "D" to 1, 2, 3, 4
+                // Map correctAnswer
                 String ansChar = obj.getString("correctAnswer");
                 int ansInt = 1;
                 if ("B".equalsIgnoreCase(ansChar)) ansInt = 2;
                 else if ("C".equalsIgnoreCase(ansChar)) ansInt = 3;
                 else if ("D".equalsIgnoreCase(ansChar)) ansInt = 4;
+
+                // Get image name if exists
+                String imageName = obj.optString("image", null);
 
                 Question q = new Question(
                     obj.getInt("id"),
@@ -106,7 +109,8 @@ public class MainActivity extends AppCompatActivity {
                     optionD,
                     ansInt,
                     obj.optString("explanation", ""),
-                    null,
+                    null, // imageResId
+                    imageName, // imageName from assets
                     obj.optBoolean("isCritical", false)
                 );
                 db.addQuestion(q, licenseClass);

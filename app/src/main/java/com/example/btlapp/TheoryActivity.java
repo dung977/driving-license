@@ -123,7 +123,6 @@ public class TheoryActivity extends AppCompatActivity {
         
         if (displayedQuestions.isEmpty()) {
             Toast.makeText(this, "Không có câu hỏi nào khớp với bộ lọc", Toast.LENGTH_SHORT).show();
-            // Optional: reset to ALL if no questions found
         }
         displayQuestion();
     }
@@ -171,7 +170,11 @@ public class TheoryActivity extends AppCompatActivity {
         // Image logic
         if (question.getImageName() != null && !question.getImageName().isEmpty()) {
             try {
-                InputStream is = getAssets().open("images/carb1/" + question.getImageName());
+                String folder = "images/carb1/";
+                if (licenseClass.startsWith("A")) {
+                    folder = "images/motoAA1/";
+                }
+                InputStream is = getAssets().open(folder + question.getImageName());
                 Bitmap bitmap = BitmapFactory.decodeStream(is);
                 ivQuestionImage.setImageBitmap(bitmap);
                 ivQuestionImage.setVisibility(View.VISIBLE);

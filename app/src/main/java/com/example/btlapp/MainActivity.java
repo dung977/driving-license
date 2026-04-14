@@ -51,11 +51,9 @@ public class MainActivity extends AppCompatActivity {
     private void initDatabase() {
         DatabaseHelper db = new DatabaseHelper(this);
         
-        // Load default repository data if needed
+        // Load A1 questions from JSON assets
         if (db.getQuestionsByClass("A1").isEmpty()) {
-            for (Question q : QuestionRepository.getMotorbikeQuestions()) {
-                db.addQuestion(q, "A1");
-            }
+            loadQuestionsFromJson(db, "questions_a1_250.json", "A1");
         }
 
         // Load B1 questions from JSON assets
@@ -68,10 +66,9 @@ public class MainActivity extends AppCompatActivity {
             loadQuestionsFromJson(db, "questions_b2.json", "B2");
         }
 
+        // Load Traffic Signs from JSON assets
         if (db.getAllTrafficSigns().isEmpty()) {
-            for (TrafficSign sign : TrafficSignRepository.getAllSigns()) {
-                db.addTrafficSign(sign);
-            }
+            loadTrafficSignsFromJson(db, "bien_bao.json");
         }
     }
 
@@ -105,9 +102,15 @@ public class MainActivity extends AppCompatActivity {
                 // Get image name if exists
                 String imageName = obj.optString("image", null);
 
+                boolean isCritical = obj.optBoolean("isCritical", false);
+                String content = obj.getString("content");
+                if (content.contains("CÂU LIỆT")) {
+                    isCritical = true;
+                }
+
                 Question q = new Question(
                     obj.getInt("id"),
-                    obj.getString("content"),
+                    content,
                     optionA,
                     optionB,
                     optionC,
@@ -116,13 +119,46 @@ public class MainActivity extends AppCompatActivity {
                     obj.optString("explanation", ""),
                     null, // imageResId
                     imageName, // imageName from assets
-                    obj.optBoolean("isCritical", false)
+                    isCritical
                 );
                 db.addQuestion(q, licenseClass);
             }
-            Log.d("DB", "Loaded questions for " + licenseClass);
+            Log.d("DB", "Loaded questions for " + licenseClass + " from " + fileName);
         } catch (Exception e) {
             Log.e("DB", "Error loading JSON from " + fileName, e);
+        }
+    }
+
+    private void loadTrafficSignsFromJson(DatabaseHelper db, String fileName) {
+        try {
+            InputStream is = getAssets().open(fileName);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            String json = new String(buffer, StandardCharsets.UTF_8);
+            
+            JSONArray jsonArray = new JSONArray(json);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject obj = jsonArray.getJSONObject(i);
+                
+                String name = obj.getString("ten_bien");
+                String description = obj.getString("thong_tin");
+                String imageName = obj.getString("image");
+                
+                // Determine category from name or default
+                String category = "Biển báo";
+                if (name.contains("Cấm")) category = "Biển báo cấm";
+                else if (name.contains("nguy hiểm")) category = "Biển báo nguy hiểm";
+                else if (name.contains("hiệu lệnh")) category = "Biển báo hiệu lệnh";
+                else if (name.contains("chỉ dẫn")) category = "Biển báo chỉ dẫn";
+
+                TrafficSign sign = new TrafficSign(name, description, imageName, category);
+                db.addTrafficSign(sign);
+            }
+            Log.d("DB", "Loaded traffic signs from " + fileName);
+        } catch (Exception e) {
+            Log.e("DB", "Error loading traffic signs from " + fileName, e);
         }
     }
 }

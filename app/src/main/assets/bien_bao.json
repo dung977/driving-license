@@ -1,0 +1,202 @@
+[
+  {
+    "ten_bien": "Biển báo Đường cấm P.101",
+    "image": "c2.png",
+    "thong_tin": "Cấm các loại phương tiện di chuyển cả 2 hướng, ngoại trừ xe ưu tiên theo quy định."
+  },
+  {
+    "ten_bien": "Biển báo Cấm đi ngược chiều P.102",
+    "image": "c3.png",
+    "thong_tin": "Cấm các loại phương tiện đi vào chiều đặt biển, ngoại trừ xe ưu tiên theo quy định."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe ô tô P.103",
+    "image": "c4.png",
+    "thong_tin": "Cấm các loại xe cơ giới đi vào, trừ xe máy 2 bánh, xe gắn máy và xe ưu tiên theo quy định.  P.103b cấm xe ô tô rẽ phải và P.103c cấm xe ô tô rẽ trái."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe máy P.104",
+    "image": "c5.png",
+    "thong_tin": "Cấm các loại xe máy đi vào, ngoại trừ xe máy được ưu tiên theo quy định. Không áp dụng với người dắt xe máy."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe ô tô và xe máy P.105",
+    "image": "c6.png",
+    "thong_tin": "Cấm các loại xe cơ giới và xe máy đi vào, ngoại trừ xe gắn máy và xe ưu tiên theo quy định."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe tải P.106",
+    "image": "c7.png",
+    "thong_tin": "Cấm xe tải, xe máy kéo, các xe máy chuyên dùng đi vào, trừ xe ưu tiên theo quy định.  P.106b cấm xe tải có khối lượng chuyên chở lớn hơn trị số ghi trên biển và P.106c cấm xe tải chở hàng nguy hiểm."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe khách và xe tải P.107",
+    "image": "c8.png",
+    "thong_tin": "Cấm các loại xe ô tô chở khách, xe tải, xe máy kéo, xe máy thi công chuyên dụng đi vào, trừ xe ưu tiên theo quy định. Bài viết cũng nêu P.107a cấm xe khách và P.107b cấm xe taxi."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe rơ-mooc P.108",
+    "image": "c9.png",
+    "thong_tin": "Cấm các loại xe cơ giới kéo rơ-mooc, kể cả xe khách, máy kéo, xe máy kéo theo rơ-mooc đi vào; trừ ô tô sơ-mi-rơ-mooc và xe ưu tiên theo quy định. Bài viết cũng nêu P.108a cấm xe sơ-mi-rơ-mooc."
+  },
+  {
+    "ten_bien": "Biển báo Cấm máy kéo P.109",
+    "image": "c10.png",
+    "thong_tin": "Cấm các loại máy kéo, máy kéo bánh xích hoặc bánh hơi đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe đạp P.110",
+    "image": "c11.png",
+    "thong_tin": "Cấm xe đạp đi vào. Không áp dụng cấm người dẫn xe đạp.  P.110B cấm xe đạp thô."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe máy P.111",
+    "image": "c12.png",
+    "thong_tin": "Cấm các loại xe máy, xe gắn máy đi vào. Không áp dụng cấm người đi xe đạp. Biển cấm xe 3 bánh có động cơ và biển cấm xe 3 bánh không động cơ."
+  },
+  {
+    "ten_bien": "Biển báo Cấm người đi bộ P.112",
+    "image": "c13.png",
+    "thong_tin": "Cấm người đi bộ đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe người kéo/đẩy P.113",
+    "image": "c14.png",
+    "thong_tin": "Cấm xe thô sơ, xe do người đẩy hoặc kéo đi vào. Không áp dụng với xe nôi trẻ em và phương tiện chuyên dùng của người khuyết tật."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe súc vật kéo P.114",
+    "image": "c15.png",
+    "thong_tin": "Cấm xe sử dụng súc vật kéo hay chở trên lưng đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Hạn chế tải trọng toàn bộ xe P.115",
+    "image": "c16.png",
+    "thong_tin": "Cấm các loại xe cơ giới hoặc thô sơ, kể cả xe ưu tiên, có tải trọng toàn bộ xe vượt quá trị số ghi trên biển đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Hạn chế tải trọng trục xe P.116",
+    "image": "c17.png",
+    "thong_tin": "Cấm các loại xe cơ giới hoặc thô sơ, kể cả xe ưu tiên, có tải trọng phân bổ trên một trục xe vượt quá trị số ghi trên biển đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Hạn chế chiều cao xe P.117",
+    "image": "c18.png",
+    "thong_tin": "Cấm các loại xe cơ giới hoặc thô sơ, kể cả xe ưu tiên, có chiều cao vượt quá trị số ghi trên biển đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Hạn chế chiều ngang xe P.118",
+    "image": "c19.png",
+    "thong_tin": "Cấm các loại xe cơ giới hoặc thô sơ, kể cả xe ưu tiên, có chiều ngang vượt quá trị số ghi trên biển đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Hạn chế chiều dài xe P.119",
+    "image": "c20.png",
+    "thong_tin": "Cấm các loại xe cơ giới hoặc thô sơ, kể cả xe ưu tiên, có chiều dài vượt quá trị số ghi trên biển đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Hạn chế chiều dài xe ô tô, máy kéo mooc hoặc sơ-mi-rơ-mooc P.120",
+    "image": "c21.png",
+    "thong_tin": "Cấm các loại xe cơ giới kéo mooc, xe sơ-mi-rơ-mooc có chiều dài vượt quá trị số ghi trên biển, kể cả xe ưu tiên, đi vào."
+  },
+  {
+    "ten_bien": "Biển báo Cự ly tối thiểu giữa hai xe P.121",
+    "image": "c22.png",
+    "thong_tin": "Các xe ô tô phải di chuyển cách nhau một khoảng tối thiểu ghi trên biển."
+  },
+  {
+    "ten_bien": "Biển báo Cấm rẽ trái hoặc Cấm rẽ phải P.123",
+    "image": "c23.png",
+    "thong_tin": "Cấm xe các loại xe cơ giới hoặc thô sơ rẽ trái hoặc phải, trừ xe ưu tiên theo quy định. Không áp dụng cấm quay đầu xe."
+  },
+  {
+    "ten_bien": "Biển báo Cấm quay đầu xe P.124",
+    "image": "c24.png",
+    "thong_tin": "Cấm các loại xe quay đầu kiểu chữ U theo chiều mũi tên trên biển. Bài viết cũng nêu P.124b cấm xe ô tô quay đầu; P.124c/d cấm rẽ và quay đầu xe; P.124e/f cấm xe ô tô rẽ và quay đầu xe."
+  },
+  {
+    "ten_bien": "Biển báo Cấm vượt P.125",
+    "image": "c25.png",
+    "thong_tin": "Cấm các loại xe cơ giới vượt nhau, kể cả xe ưu tiên theo quy định, nhưng được phép vượt xe máy 2 bánh và xe gắn máy."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe tải vượt P.126",
+    "image": "c26.png",
+    "thong_tin": "Cấm các loại xe tải vượt xe cơ giới khác; được phép vượt xe máy 2 bánh và xe gắn máy. Không áp dụng với các loại xe cơ giới khác vượt xe nhau và vượt xe tải."
+  },
+  {
+    "ten_bien": "Biển báo Tốc độ tối đa cho phép P.126",
+    "image": "c27.png",
+    "thong_tin": "Các xe cơ giới chạy không vượt quá tốc độ ghi trên biển, trừ xe ưu tiên theo quy định."
+  },
+  {
+    "ten_bien": "Biển báo Tốc độ tối đa cho phép vào ban đêm P.127",
+    "image": "c28.png",
+    "thong_tin": "Các xe cơ giới chạy không vượt quá tốc độ ghi trên biển, trừ xe ưu tiên theo quy định, và chỉ áp dụng vào ban đêm."
+  },
+  {
+    "ten_bien": "Biển báo Cấm sử dụng còi P.128",
+    "image": "c29.png",
+    "thong_tin": "Cấm các loại xe sử dụng còi."
+  },
+  {
+    "ten_bien": "Biển báo Kiểm tra P.129",
+    "image": "c30.png",
+    "thong_tin": "Báo nơi đặt trạm kiểm tra; các loại xe vận tải đi qua phải dừng lại để kiểm tra theo quy định."
+  },
+  {
+    "ten_bien": "Biển báo Cấm dừng xe và đỗ xe P.130",
+    "image": "c31.png",
+    "thong_tin": "Cấm các loại xe cơ giới dừng và đỗ xe phía đường có đặt biển, trừ xe ưu tiên theo quy định."
+  },
+  {
+    "ten_bien": "Biển báo Cấm đỗ xe P.131",
+    "image": "c32.png",
+    "thong_tin": "Cấm các loại xe cơ giới đỗ xe phía đường có đặt biển, trừ xe ưu tiên. Bài viết nêu P.131b áp dụng với ngày lẻ và P.131c áp dụng với ngày chẵn."
+  },
+  {
+    "ten_bien": "Biển báo Nhường đường cho xe cơ giới đi ngược chiều qua đường hẹp P.132",
+    "image": "c33.png",
+    "thong_tin": "Các loại xe cơ giới hoặc thô sơ, kể cả xe ưu tiên theo quy định, phải nhường đường cho các loại xe cơ giới đang di chuyển chiều ngược lại."
+  },
+  {
+    "ten_bien": "Biển báo Hết cấm vượt P.133",
+    "image": "c34.png",
+    "thong_tin": "Thông báo hết đoạn đường cấm vượt."
+  },
+  {
+    "ten_bien": "Biển báo Hết hạn chế tốc độ tối đa P.134",
+    "image": "c35.png",
+    "thong_tin": "Thông báo hết đoạn đường hạn chế tốc độ tối đa."
+  },
+  {
+    "ten_bien": "Biển báo Hết tất cả các lệnh cấm P.135",
+    "image": "c36.png",
+    "thong_tin": "Thông báo hết đoạn đường áp dụng tất cả các lệnh cấm."
+  },
+  {
+    "ten_bien": "Biển báo Cấm đi thẳng P.136",
+    "image": "c37.png",
+    "thong_tin": "Cấm các loại xe cơ giới hoặc thô sơ đi thẳng vào đoạn đường phía trước."
+  },
+  {
+    "ten_bien": "Biển báo Cấm rẽ trái, rẽ phải P.137",
+    "image": "c38.png",
+    "thong_tin": "Cấm các loại xe cơ giới rẽ trái, rẽ phải. Biển đặt ở vị trí ngay trước nút giao; nếu có quy định thời gian cấm thì có biển phụ bên dưới."
+  },
+  {
+    "ten_bien": "Biển báo Cấm đi thẳng, rẽ trái P.138",
+    "image": "c39.png",
+    "thong_tin": "Cấm các loại xe cơ giới đi thẳng, rẽ trái. Biển đặt ở vị trí ngay trước nút giao; nếu có quy định thời gian cấm thì có biển phụ bên dưới."
+  },
+  {
+    "ten_bien": "Biển báo Cấm đi thẳng, rẽ phải P.139",
+    "image": "c40.png",
+    "thong_tin": "Cấm các loại xe cơ giới đi thẳng, rẽ phải. Biển đặt ở vị trí ngay trước nút giao; nếu có quy định thời gian cấm thì có biển phụ bên dưới."
+  },
+  {
+    "ten_bien": "Biển báo Cấm xe công nông và các loại xe tương tự P.140",
+    "image": "c41.png",
+    "thong_tin": "Cấm các loại xe công nông, xe tương tự công nông đi vào."
+  }
+]

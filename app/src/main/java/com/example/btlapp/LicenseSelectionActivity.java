@@ -49,16 +49,16 @@ public class LicenseSelectionActivity extends AppCompatActivity {
 
     private void setupMotorbikeListeners(String type) {
         findViewById(R.id.btnA1).setOnClickListener(v -> startCategory(type, "A1"));
-        findViewById(R.id.btnA2).setOnClickListener(v -> startCategory(type, "A2"));
-        findViewById(R.id.btnA3).setOnClickListener(v -> startCategory(type, "A3"));
-        findViewById(R.id.btnA4).setOnClickListener(v -> startCategory(type, "A4"));
+//        findViewById(R.id.btnA2).setOnClickListener(v -> startCategory(type, "A2"));
+//        findViewById(R.id.btnA3).setOnClickListener(v -> startCategory(type, "A3"));
+//        findViewById(R.id.btnA4).setOnClickListener(v -> startCategory(type, "A4"));
     }
 
     private void setupCarListeners(String type) {
         findViewById(R.id.btnB1).setOnClickListener(v -> startCategory(type, "B1"));
         findViewById(R.id.btnB2).setOnClickListener(v -> startCategory(type, "B2"));
-        findViewById(R.id.btnC).setOnClickListener(v -> startCategory(type, "C"));
-        findViewById(R.id.btnD).setOnClickListener(v -> startCategory(type, "D"));
+//        findViewById(R.id.btnC).setOnClickListener(v -> startCategory(type, "C"));
+//        findViewById(R.id.btnD).setOnClickListener(v -> startCategory(type, "D"));
     }
 
     private void startCategory(String type, String licenseClass) {

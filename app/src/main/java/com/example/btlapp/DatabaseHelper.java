@@ -12,7 +12,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "driving_license.db";
-    private static final int DATABASE_VERSION = 4; // Upgraded version for user progress
+    private static final int DATABASE_VERSION = 6; // Upgraded version for Traffic Sign image name
 
     // Table Questions
     private static final String TABLE_QUESTIONS = "questions";
@@ -36,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_SIGNS = "traffic_signs";
     private static final String COLUMN_S_NAME = "name";
     private static final String COLUMN_S_DESCRIPTION = "description";
-    private static final String COLUMN_S_IMAGE_RES_ID = "image_res_id";
+    private static final String COLUMN_S_IMAGE_NAME = "image_name";
     private static final String COLUMN_S_CATEGORY = "category";
 
     public DatabaseHelper(Context context) {
@@ -63,7 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String createSignsTable = "CREATE TABLE " + TABLE_SIGNS + " (" +
                 COLUMN_S_NAME + " TEXT, " +
                 COLUMN_S_DESCRIPTION + " TEXT, " +
-                COLUMN_S_IMAGE_RES_ID + " INTEGER, " +
+                COLUMN_S_IMAGE_NAME + " TEXT, " +
                 COLUMN_S_CATEGORY + " TEXT)";
 
         db.execSQL(createQuestionsTable);
@@ -72,11 +72,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if (oldVersion < 4) {
-            db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUESTIONS);
-            db.execSQL("DROP TABLE IF EXISTS " + TABLE_SIGNS);
-            onCreate(db);
-        }
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUESTIONS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SIGNS);
+        onCreate(db);
     }
 
     public void addQuestion(Question question, String licenseClass) {
@@ -150,7 +148,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_Q_IMAGE_NAME)),
                         cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_Q_IS_CRITICAL)) == 1
                 );
-                // We can set the user answer if we add a field to Question class, or handle it in activity
                 questionList.add(question);
             } while (cursor.moveToNext());
         }
@@ -158,7 +155,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return questionList;
     }
 
-    // Existing methods kept for compatibility
     public List<Question> getQuestionsByClass(String licenseClass) {
         return getFilteredQuestions(licenseClass, "ALL");
     }
@@ -180,7 +176,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_S_NAME, sign.getName());
         values.put(COLUMN_S_DESCRIPTION, sign.getDescription());
-        values.put(COLUMN_S_IMAGE_RES_ID, sign.getImageResId());
+        values.put(COLUMN_S_IMAGE_NAME, sign.getImageName());
         values.put(COLUMN_S_CATEGORY, sign.getCategory());
 
         db.insert(TABLE_SIGNS, null, values);
@@ -196,7 +192,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 TrafficSign sign = new TrafficSign(
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_S_NAME)),
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_S_DESCRIPTION)),
-                        cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_S_IMAGE_RES_ID)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_S_IMAGE_NAME)),
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_S_CATEGORY))
                 );
                 signList.add(sign);

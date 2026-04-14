@@ -1,7 +1,10 @@
 package com.example.btlapp;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,6 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -38,6 +45,11 @@ public class MockTestActivity extends AppCompatActivity {
     private Button btnPrev;
     private Button btnNext;
     private Button btnSubmit;
+    
+    private int totalQuestions = 25; 
+    private int passingScore = 21;   
+    private int timeLimitMinutes = 19; 
+    private String licenseClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,25 +105,8 @@ public class MockTestActivity extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
     }
 
-    private void loadMockQuestions() {
-        String licenseClass = getIntent().getStringExtra("LICENSE_CLASS");
-        if (licenseClass == null) licenseClass = "B1";
-        
-        List<Question> allQuestions = dbHelper.getQuestionsByClass(licenseClass);
-        if (allQuestions.isEmpty()) {
-            if (licenseClass.startsWith("A")) {
-                allQuestions = QuestionRepository.getMotorbikeQuestions();
-            } else {
-                allQuestions = QuestionRepository.getCarQuestions();
-            }
-        }
-        
-        Collections.shuffle(allQuestions);
-        questions = allQuestions.subList(0, Math.min(25, allQuestions.size()));
-    }
-
     private void startTimer() {
-        new CountDownTimer(20 * 60 * 1000, 1000) {
+        new CountDownTimer(timeLimitMinutes * 60 * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 long minutes = millisUntilFinished / 1000 / 60;
@@ -135,7 +130,21 @@ public class MockTestActivity extends AppCompatActivity {
         tvContent.setText(q.getContent());
         
         // Handle Image
-        if (q.getImageResId() != null && q.getImageResId() != 0) {
+        if (q.getImageName() != null && !q.getImageName().isEmpty()) {
+            try {
+                String folder = "images/carb1/";
+                if (licenseClass != null && licenseClass.startsWith("A")) {
+                    folder = "images/motoAA1/";
+                }
+                InputStream is = getAssets().open(folder + q.getImageName());
+                Bitmap bitmap = BitmapFactory.decodeStream(is);
+                ivQuestionImage.setImageBitmap(bitmap);
+                ivQuestionImage.setVisibility(View.VISIBLE);
+                is.close();
+            } catch (IOException e) {
+                ivQuestionImage.setVisibility(View.GONE);
+            }
+        } else if (q.getImageResId() != null && q.getImageResId() != 0) {
             ivQuestionImage.setVisibility(View.VISIBLE);
             ivQuestionImage.setImageResource(q.getImageResId());
         } else {
@@ -143,19 +152,19 @@ public class MockTestActivity extends AppCompatActivity {
         }
 
         // Display answers with labels A, B, C, D
-        rbA.setText("A. " + q.getOptionA());
-        rbB.setText("B. " + q.getOptionB());
+        rbA.setText("1. " + q.getOptionA());
+        rbB.setText("2. " + q.getOptionB());
         
         if (q.getOptionC() != null && !q.getOptionC().isEmpty()) {
             rbC.setVisibility(View.VISIBLE);
-            rbC.setText("C. " + q.getOptionC());
+            rbC.setText("3. " + q.getOptionC());
         } else {
             rbC.setVisibility(View.GONE);
         }
         
         if (q.getOptionD() != null && !q.getOptionD().isEmpty()) {
             rbD.setVisibility(View.VISIBLE);
-            rbD.setText("D. " + q.getOptionD());
+            rbD.setText("4. " + q.getOptionD());
         } else {
             rbD.setVisibility(View.GONE);
         }
@@ -183,6 +192,52 @@ public class MockTestActivity extends AppCompatActivity {
         }
     }
 
+    private void loadMockQuestions() {
+        licenseClass = getIntent().getStringExtra("LICENSE_CLASS");
+        if (licenseClass == null) licenseClass = "A1";
+
+        // Thiết lập thông số theo luật
+        if (licenseClass.equals("B2")) {
+            totalQuestions = 35;
+            passingScore = 32;
+            timeLimitMinutes = 22;
+        } else if (licenseClass.equals("B1")) {
+            totalQuestions = 30;
+            passingScore = 27;
+            timeLimitMinutes = 20;
+        } else { // A1, A2...
+            totalQuestions = 25;
+            passingScore = 21;
+            timeLimitMinutes = 19;
+        }
+
+        List<Question> allQuestions = dbHelper.getQuestionsByClass(licenseClass);
+        if (allQuestions != null && !allQuestions.isEmpty()) {
+            List<Question> criticalQuestions = new ArrayList<>();
+            List<Question> normalQuestions = new ArrayList<>();
+
+            for (Question q : allQuestions) {
+                if (q.isCritical()) criticalQuestions.add(q);
+                else normalQuestions.add(q);
+            }
+
+            Collections.shuffle(criticalQuestions);
+            Collections.shuffle(normalQuestions);
+
+            List<Question> testList = new ArrayList<>();
+            // Lấy 1-2 câu điểm liệt
+            int numCritical = Math.min(2, criticalQuestions.size());
+            testList.addAll(criticalQuestions.subList(0, numCritical));
+
+            // Lấy số câu thường còn lại
+            int numNormal = totalQuestions - numCritical;
+            testList.addAll(normalQuestions.subList(0, Math.min(numNormal, normalQuestions.size())));
+
+            Collections.shuffle(testList);
+            questions = testList;
+        }
+    }
+
     private void showSubmitDialog() {
         new AlertDialog.Builder(this)
             .setTitle("Nộp bài")
@@ -201,20 +256,20 @@ public class MockTestActivity extends AppCompatActivity {
             Integer userAnswer = userAnswers.get(i);
             if (userAnswer != null && userAnswer == question.getCorrectAnswer()) {
                 correctCount++;
-            } else if (question.isCritical()) {
-                if (userAnswer != null) {
+            } else {
+                if (question.isCritical()) {
                     failedCritical = true;
                 }
             }
         }
 
         String resultMessage;
-        if (failedCritical) {
-            resultMessage = "Bạn đã TRƯỢT do trả lời sai câu hỏi điểm liệt.";
-        } else if (correctCount >= 21) {
+        if (failedCritical && correctCount >= passingScore) {
+            resultMessage = "Bạn TRƯỢT do trả lời sai câu hỏi điểm liệt (Đạt " + correctCount + "/" + questions.size() + ").";
+        } else if (correctCount >= passingScore) {
             resultMessage = "Chúc mừng! Bạn đã ĐẠT (" + correctCount + "/" + questions.size() + ").";
         } else {
-            resultMessage = "Bạn không đạt (" + correctCount + "/" + questions.size() + ").";
+            resultMessage = "Bạn KHÔNG ĐẠT (" + correctCount + "/" + questions.size() + ").";
         }
 
         new AlertDialog.Builder(this)

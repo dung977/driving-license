@@ -1,6 +1,9 @@
 package com.example.btlapp;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +15,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class TrafficSignsActivity extends AppCompatActivity {
@@ -27,14 +33,16 @@ public class TrafficSignsActivity extends AppCompatActivity {
             return insets;
         });
 
+        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
+
         RecyclerView rvTrafficSigns = findViewById(R.id.rvTrafficSigns);
+        rvTrafficSigns.setLayoutManager(new LinearLayoutManager(this));
+        
         DatabaseHelper db = new DatabaseHelper(this);
         List<TrafficSign> signs = db.getAllTrafficSigns();
         
-        if (signs.isEmpty()) {
-            signs = TrafficSignRepository.getAllSigns();
-        }
-
+        Log.d("Signs", "Total signs loaded: " + signs.size());
+        
         rvTrafficSigns.setAdapter(new TrafficSignAdapter(signs));
     }
 
@@ -71,10 +79,27 @@ public class TrafficSignsActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             TrafficSign sign = signs.get(position);
-            holder.ivSign.setImageResource(sign.getImageResId());
+            
+            // Load image from assets
+            if (sign.getImageName() != null && !sign.getImageName().isEmpty()) {
+                try {
+                    InputStream is = holder.itemView.getContext().getAssets().open("images/Sign/" + sign.getImageName());
+                    Bitmap bitmap = BitmapFactory.decodeStream(is);
+                    holder.ivSign.setImageBitmap(bitmap);
+                    is.close();
+                } catch (IOException e) {
+                    Log.e("Signs", "Error loading sign image: " + sign.getImageName(), e);
+                    holder.ivSign.setImageResource(android.R.drawable.ic_menu_report_image);
+                }
+            } else if (sign.getImageResId() != 0) {
+                holder.ivSign.setImageResource(sign.getImageResId());
+            } else {
+                holder.ivSign.setImageResource(android.R.drawable.ic_menu_report_image);
+            }
+
             holder.tvName.setText(sign.getName());
             holder.tvDesc.setText(sign.getDescription());
-            holder.tvCategory.setText("Loại: " + sign.getCategory());
+            holder.tvCategory.setText(sign.getCategory());
         }
 
         @Override

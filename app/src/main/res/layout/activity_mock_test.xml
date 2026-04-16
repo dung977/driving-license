@@ -5,33 +5,79 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:background="@color/white"
     tools:context=".MockTestActivity">
 
-    <TextView
-        android:id="@+id/tvTimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="19:59"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#F44336"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Header Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đề thi"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="19:59"
+            android:textColor="#F44336"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <TextView
         android:id="@+id/tvMockQuestionCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:text="Câu 1/25"
+        android:textColor="#757575"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/divider" />
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
+        android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@id/btnMockNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nội dung câu hỏi thi thử"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -64,31 +111,39 @@
                 android:id="@+id/rgMockOptions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="24dp">
 
                 <RadioButton
                     android:id="@+id/rbMockOptionA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp" />
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textColor="@color/black" />
 
                 <RadioButton
                     android:id="@+id/rbMockOptionB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp" />
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textColor="@color/black" />
 
                 <RadioButton
                     android:id="@+id/rbMockOptionC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp" />
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textColor="@color/black" />
 
                 <RadioButton
                     android:id="@+id/rbMockOptionD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp" />
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    android:textColor="@color/black" />
             </RadioGroup>
         </LinearLayout>
     </ScrollView>
@@ -97,6 +152,8 @@
         android:id="@+id/btnMockPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Trước"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -105,8 +162,9 @@
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nộp bài"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#4CAF50"
+        android:text="Nộp bài"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnMockNext"
         app:layout_constraintStart_toEndOf="@id/btnMockPrevious" />
@@ -115,6 +173,8 @@
         android:id="@+id/btnMockNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Sau"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

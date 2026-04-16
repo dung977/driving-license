@@ -30,7 +30,7 @@ public class MockTestActivity extends AppCompatActivity {
 
     private List<Question> questions;
     private int currentIndex = 0;
-    private Map<Integer, Integer> userAnswers = new HashMap<>(); // Question Index -> Selected Option
+    private Map<Integer, Integer> userAnswers = new HashMap<>(); 
     private DatabaseHelper dbHelper;
 
     private TextView tvTimer;
@@ -45,6 +45,7 @@ public class MockTestActivity extends AppCompatActivity {
     private Button btnPrev;
     private Button btnNext;
     private Button btnSubmit;
+    private TextView tvToolbarTitle;
     
     private int totalQuestions = 25; 
     private int passingScore = 21;   
@@ -103,6 +104,7 @@ public class MockTestActivity extends AppCompatActivity {
         btnPrev = findViewById(R.id.btnMockPrevious);
         btnNext = findViewById(R.id.btnMockNext);
         btnSubmit = findViewById(R.id.btnSubmit);
+        tvToolbarTitle = findViewById(R.id.tvToolbarTitle);
     }
 
     private void startTimer() {
@@ -123,20 +125,18 @@ public class MockTestActivity extends AppCompatActivity {
     }
 
     private void displayQuestion() {
-        if (questions == null || questions.isEmpty()) return;
+        if (questions == null || questions.isEmpty()) {
+            tvContent.setText("Không thể tải đề thi cho hạng " + licenseClass + ". Vui lòng kiểm tra lại dữ liệu.");
+            return;
+        }
 
         Question q = questions.get(currentIndex);
         tvCount.setText("Câu " + (currentIndex + 1) + "/" + questions.size());
         tvContent.setText(q.getContent());
         
-        // Handle Image
         if (q.getImageName() != null && !q.getImageName().isEmpty()) {
             try {
-                String folder = "images/carb1/";
-                if (licenseClass != null && licenseClass.startsWith("A")) {
-                    folder = "images/motoAA1/";
-                }
-                InputStream is = getAssets().open(folder + q.getImageName());
+                InputStream is = getAssets().open("images/600cauhoi/" + q.getImageName());
                 Bitmap bitmap = BitmapFactory.decodeStream(is);
                 ivQuestionImage.setImageBitmap(bitmap);
                 ivQuestionImage.setVisibility(View.VISIBLE);
@@ -144,14 +144,10 @@ public class MockTestActivity extends AppCompatActivity {
             } catch (IOException e) {
                 ivQuestionImage.setVisibility(View.GONE);
             }
-        } else if (q.getImageResId() != null && q.getImageResId() != 0) {
-            ivQuestionImage.setVisibility(View.VISIBLE);
-            ivQuestionImage.setImageResource(q.getImageResId());
         } else {
             ivQuestionImage.setVisibility(View.GONE);
         }
 
-        // Display answers with labels A, B, C, D
         rbA.setText("1. " + q.getOptionA());
         rbB.setText("2. " + q.getOptionB());
         
@@ -187,7 +183,6 @@ public class MockTestActivity extends AppCompatActivity {
             else if (selectedId == R.id.rbMockOptionB) answer = 2;
             else if (selectedId == R.id.rbMockOptionC) answer = 3;
             else if (selectedId == R.id.rbMockOptionD) answer = 4;
-            
             userAnswers.put(currentIndex, answer);
         }
     }
@@ -196,45 +191,29 @@ public class MockTestActivity extends AppCompatActivity {
         licenseClass = getIntent().getStringExtra("LICENSE_CLASS");
         if (licenseClass == null) licenseClass = "A1";
 
-        // Thiết lập thông số theo luật
-        if (licenseClass.equals("B2")) {
-            totalQuestions = 35;
-            passingScore = 32;
-            timeLimitMinutes = 22;
-        } else if (licenseClass.equals("B1")) {
-            totalQuestions = 30;
-            passingScore = 27;
-            timeLimitMinutes = 20;
-        } else { // A1, A2...
-            totalQuestions = 25;
-            passingScore = 21;
-            timeLimitMinutes = 19;
-        }
+        tvToolbarTitle.setText("Đề thi hạng " + licenseClass);
 
-        List<Question> allQuestions = dbHelper.getQuestionsByClass(licenseClass);
-        if (allQuestions != null && !allQuestions.isEmpty()) {
-            List<Question> criticalQuestions = new ArrayList<>();
-            List<Question> normalQuestions = new ArrayList<>();
-
-            for (Question q : allQuestions) {
-                if (q.isCritical()) criticalQuestions.add(q);
-                else normalQuestions.add(q);
+        if (licenseClass.startsWith("A")) {
+            totalQuestions = 25; passingScore = 21; timeLimitMinutes = 19;
+            questions = ExamManager.generateExamA1(dbHelper, licenseClass);
+        } else {
+            // Thiết lập thông số cho Ô tô
+            if (licenseClass.startsWith("B")) {
+                totalQuestions = (licenseClass.equals("B1")) ? 30 : 30; // Giả định B=30 theo yêu cầu cũ, điều chỉnh nếu cần
+                if (licenseClass.equals("B")) totalQuestions = 30;
+                passingScore = (totalQuestions == 30) ? 27 : 27;
+                timeLimitMinutes = 25; // Theo yêu cầu mới: B, B1 là 25 phút
+            } else if (licenseClass.startsWith("C")) {
+                if (licenseClass.equals("C1")) {
+                    totalQuestions = 35; passingScore = 32;
+                } else if (licenseClass.equals("C")) {
+                    totalQuestions = 40; passingScore = 36;
+                }
+                timeLimitMinutes = 25; // Theo yêu cầu mới: C, C1 là 25 phút
+            } else {
+                totalQuestions = 30; passingScore = 27; timeLimitMinutes = 25;
             }
-
-            Collections.shuffle(criticalQuestions);
-            Collections.shuffle(normalQuestions);
-
-            List<Question> testList = new ArrayList<>();
-            // Lấy 1-2 câu điểm liệt
-            int numCritical = Math.min(2, criticalQuestions.size());
-            testList.addAll(criticalQuestions.subList(0, numCritical));
-
-            // Lấy số câu thường còn lại
-            int numNormal = totalQuestions - numCritical;
-            testList.addAll(normalQuestions.subList(0, Math.min(numNormal, normalQuestions.size())));
-
-            Collections.shuffle(testList);
-            questions = testList;
+            questions = ExamManager.generateExamCar(dbHelper, licenseClass);
         }
     }
 
@@ -257,14 +236,12 @@ public class MockTestActivity extends AppCompatActivity {
             if (userAnswer != null && userAnswer == question.getCorrectAnswer()) {
                 correctCount++;
             } else {
-                if (question.isCritical()) {
-                    failedCritical = true;
-                }
+                if (question.isCritical()) failedCritical = true;
             }
         }
 
         String resultMessage;
-        if (failedCritical && correctCount >= passingScore) {
+        if (failedCritical) {
             resultMessage = "Bạn TRƯỢT do trả lời sai câu hỏi điểm liệt (Đạt " + correctCount + "/" + questions.size() + ").";
         } else if (correctCount >= passingScore) {
             resultMessage = "Chúc mừng! Bạn đã ĐẠT (" + correctCount + "/" + questions.size() + ").";

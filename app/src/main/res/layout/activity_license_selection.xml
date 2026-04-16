@@ -95,6 +95,24 @@
                     app:iconTint="#BDBDBD"
                     app:strokeColor="#DDDDDD" />
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnB1_moto"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="24dp"
+                    android:text="Hạng B1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_chevron_right"
+                    app:iconGravity="end"
+                    app:iconTint="#BDBDBD"
+                    app:strokeColor="#DDDDDD" />
+
             </LinearLayout>
 
             <!-- Nhóm bằng Ô TÔ -->
@@ -115,6 +133,42 @@
                     android:gravity="center_vertical|start"
                     android:paddingStart="24dp"
                     android:text="Hạng B"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_chevron_right"
+                    app:iconGravity="end"
+                    app:iconTint="#BDBDBD"
+                    app:strokeColor="#DDDDDD" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnC"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="24dp"
+                    android:text="Hạng C"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_chevron_right"
+                    app:iconGravity="end"
+                    app:iconTint="#BDBDBD"
+                    app:strokeColor="#DDDDDD" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnC1"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="24dp"
+                    android:text="Hạng C1"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="16sp"

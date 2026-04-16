@@ -49,11 +49,13 @@ public class LicenseSelectionActivity extends AppCompatActivity {
 
     private void setupMotorbikeListeners(String type) {
         findViewById(R.id.btnA1).setOnClickListener(v -> startCategory(type, "A1"));
+        findViewById(R.id.btnB1_moto).setOnClickListener(v -> startCategory(type, "B1"));
     }
 
     private void setupCarListeners(String type) {
-        // Thay thế B1, B2 bằng một nút Hạng B duy nhất
-        findViewById(R.id.btnB).setOnClickListener(v -> startCategory(type, "B1"));
+        findViewById(R.id.btnB).setOnClickListener(v -> startCategory(type, "B"));
+        findViewById(R.id.btnC).setOnClickListener(v -> startCategory(type, "C"));
+        findViewById(R.id.btnC1).setOnClickListener(v -> startCategory(type, "C1"));
     }
 
     private void startCategory(String type, String licenseClass) {

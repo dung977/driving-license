@@ -16,7 +16,6 @@ import org.json.JSONObject;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,17 +52,14 @@ public class MainActivity extends AppCompatActivity {
     private void initDatabase() {
         DatabaseHelper db = new DatabaseHelper(this);
         
-        // Load A1 questions from JSON assets
-        if (db.getQuestionsByClass("A1").isEmpty()) {
-            loadQuestionsFromJson(db, "questions_a1_250.json", "A1");
+        // Danh sách các hạng bằng cần nạp dữ liệu đầy đủ
+        String[] classes = {"A1", "B1", "B", "C1", "C", "D"};
+        for (String licenseClass : classes) {
+            if (db.getQuestionsByClass(licenseClass).isEmpty()) {
+                loadQuestionsFromJson(db, "600question.json", licenseClass);
+            }
         }
 
-        // Load B1 questions from JSON assets (Hạng B)
-        if (db.getQuestionsByClass("B1").isEmpty()) {
-            loadQuestionsFromJson(db, "questions_b1.json", "B1");
-        }
-
-        // Load Traffic Signs from JSON assets
         if (db.getAllTrafficSigns().isEmpty()) {
             loadTrafficSignsFromJson(db, "bien_bao.json");
         }
@@ -78,26 +74,27 @@ public class MainActivity extends AppCompatActivity {
             is.close();
             String json = new String(buffer, StandardCharsets.UTF_8);
             
-            // Danh sách ID câu hỏi điểm liệt cho Ô tô (60 câu theo luật)
-            Set<Integer> criticalIds = new HashSet<>();
-            if (licenseClass.equals("B1") || licenseClass.equals("B2")) {
-                int[] bCriticals = {17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76};
-                for (int id : bCriticals) criticalIds.add(id);
-            }
-
             JSONArray jsonArray = new JSONArray(json);
+            
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject obj = jsonArray.getJSONObject(i);
                 int id = obj.getInt("id");
                 
-                // Parse options
+                // KIỂM TRA ID:
+                // Đối với A1 và B1: Lọc theo danh sách ID cụ thể đã định nghĩa trong DatabaseHelper
+                // Đối với B, C, C1, D: Nạp full 600 câu để bốc đề thi thử và lọc lý thuyết
+                if (licenseClass.equals("A1") || licenseClass.equals("B1")) {
+                    if (!db.isIdInClass(id, licenseClass)) {
+                        continue; 
+                    }
+                }
+
                 JSONObject optionsObj = obj.getJSONObject("options");
                 String optionA = optionsObj.optString("A", "");
                 String optionB = optionsObj.optString("B", "");
                 String optionC = optionsObj.optString("C", "");
                 String optionD = optionsObj.optString("D", null);
                 
-                // Map correctAnswer
                 String ansChar = obj.getString("correctAnswer");
                 int ansInt = 1;
                 if ("B".equalsIgnoreCase(ansChar)) ansInt = 2;
@@ -106,11 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
                 String imageName = obj.optString("image", null);
                 String content = obj.getString("content");
-
-                // Logic xác định câu điểm liệt:
-                // 1. Dựa trên danh sách ID quy định
-                // 2. Hoặc dựa trên từ khóa trong nội dung
-                boolean isCritical = criticalIds.contains(id) || content.contains("CÂU LIỆT");
 
                 Question q = new Question(
                     id,
@@ -123,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
                     obj.optString("explanation", ""),
                     null,
                     imageName,
-                    isCritical
+                    false
                 );
                 db.addQuestion(q, licenseClass);
             }
-            Log.d("DB", "Loaded questions for " + licenseClass + " from " + fileName);
+            Log.d("DB", "Loaded questions for " + licenseClass + " - Total: " + db.getQuestionsByClass(licenseClass).size());
         } catch (Exception e) {
             Log.e("DB", "Error loading JSON from " + fileName, e);
         }

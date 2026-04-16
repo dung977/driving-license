@@ -128,30 +128,32 @@ public class TheoryActivity extends AppCompatActivity {
     }
 
     private void showFilterDialog() {
-        String[] options = {
-            "Tất cả", 
-            "Câu hỏi điểm liệt", 
-            "Khái niệm và quy tắc", 
-            "Câu sai", 
-            "Đã làm", 
-            "Chưa làm", 
-            "Câu có hình ảnh"
-        };
-        String[] filterKeys = {
-            "ALL", 
-            "CRITICAL", 
-            "CONCEPTS", 
-            "WRONG", 
-            "DONE", 
-            "NOT_DONE", 
-            "HAS_IMAGE"
-        };
+        List<String> options = new ArrayList<>();
+        List<String> filterKeys = new ArrayList<>();
+
+        options.add("Tất cả"); filterKeys.add("ALL");
+        options.add("Câu hỏi điểm liệt"); filterKeys.add("CRITICAL");
+        options.add("Quy tắc giao thông"); filterKeys.add("RULES");
+        options.add("Văn hóa, Đạo đức"); filterKeys.add("CULTURE");
+        options.add("Kỹ thuật lái xe"); filterKeys.add("TECHNIQUES");
+
+        // Cấu tạo và sửa chữa CHỈ hiện cho Ô tô
+        if (!licenseClass.startsWith("A")) {
+            options.add("Cấu tạo và sửa chữa");
+            filterKeys.add("REPAIR");
+        }
+
+        options.add("Hệ thống biển báo"); filterKeys.add("SIGNS");
+        options.add("Sa hình & Tình huống"); filterKeys.add("SITUATIONS");
+        options.add("Câu sai"); filterKeys.add("WRONG");
+        options.add("Đã làm"); filterKeys.add("DONE");
+        options.add("Chưa làm"); filterKeys.add("NOT_DONE");
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Chọn bộ lọc");
-        builder.setItems(options, (dialog, which) -> {
-            applyFilter(filterKeys[which]);
-            tvFilter.setText(options[which]);
+        builder.setTitle("Chọn chủ đề ôn tập");
+        builder.setItems(options.toArray(new String[0]), (dialog, which) -> {
+            applyFilter(filterKeys.get(which));
+            tvFilter.setText(options.get(which));
         });
         builder.show();
     }
@@ -183,14 +185,9 @@ public class TheoryActivity extends AppCompatActivity {
         tvQuestionCount.setText("Câu " + (currentIndex + 1) + "/" + displayedQuestions.size());
         tvQuestionContent.setText(question.getContent());
         
-        // Image logic
         if (question.getImageName() != null && !question.getImageName().isEmpty()) {
             try {
-                String folder = "images/carb1/";
-                if (licenseClass.startsWith("A")) {
-                    folder = "images/motoAA1/";
-                }
-                InputStream is = getAssets().open(folder + question.getImageName());
+                InputStream is = getAssets().open("images/600cauhoi/" + question.getImageName());
                 Bitmap bitmap = BitmapFactory.decodeStream(is);
                 ivQuestionImage.setImageBitmap(bitmap);
                 ivQuestionImage.setVisibility(View.VISIBLE);
@@ -202,7 +199,6 @@ public class TheoryActivity extends AppCompatActivity {
             ivQuestionImage.setVisibility(View.GONE);
         }
 
-        // Reset colors
         rbOptionA.setTextColor(Color.BLACK);
         rbOptionB.setTextColor(Color.BLACK);
         rbOptionC.setTextColor(Color.BLACK);
@@ -225,7 +221,6 @@ public class TheoryActivity extends AppCompatActivity {
             rbOptionD.setVisibility(View.GONE);
         }
 
-        // Restore answer from DB
         int savedAns = dbHelper.getUserAnswer(question.getId());
         rgOptions.setOnCheckedChangeListener(null);
         rgOptions.clearCheck();
@@ -251,7 +246,6 @@ public class TheoryActivity extends AppCompatActivity {
         Question question = displayedQuestions.get(currentIndex);
         int correctAnswer = question.getCorrectAnswer();
         int userAnswer = dbHelper.getUserAnswer(question.getId());
-
         if (userAnswer == 0) return;
 
         if (correctAnswer == 1) rbOptionA.setTextColor(Color.parseColor("#2E7D32"));
@@ -266,8 +260,8 @@ public class TheoryActivity extends AppCompatActivity {
             else if (userAnswer == 4) rbOptionD.setTextColor(Color.RED);
         }
 
-        String explanation = question.getExplanation();
         tvExplanation.setVisibility(View.VISIBLE);
+        String explanation = question.getExplanation();
         if (explanation != null && !explanation.trim().isEmpty()) {
             tvExplanation.setText("Giải thích: " + explanation);
         } else {

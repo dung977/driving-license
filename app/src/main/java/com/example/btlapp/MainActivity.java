@@ -112,9 +112,6 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject obj = jsonArray.getJSONObject(i);
                 int id = obj.getInt("id");
 
-                // KIỂM TRA ID:
-                // Đối với A1 và B1: Lọc theo danh sách ID cụ thể đã định nghĩa trong DatabaseHelper
-                // Đối với B, C, C1, D: Nạp full 600 câu để bốc đề thi thử và lọc lý thuyết
                 if (licenseClass.equals("A1") || licenseClass.equals("B1")) {
                     if (!db.isIdInClass(id, licenseClass)) {
                         continue;

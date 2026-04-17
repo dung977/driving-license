@@ -16,7 +16,7 @@ import java.util.Set;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "driving_license.db";
-    private static final int DATABASE_VERSION = 16; // Tăng version để nạp lại dữ liệu chuẩn cho B1
+    private static final int DATABASE_VERSION = 16;
 
     private static final String TABLE_QUESTIONS = "questions";
     private static final String COLUMN_Q_ID = "id";
@@ -34,6 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_Q_IS_ANSWERED = "is_answered";
 
     private static final String TABLE_SIGNS = "traffic_signs";
+    private static final String COLUMN_S_ID = "id";
     private static final String COLUMN_S_NAME = "name";
     private static final String COLUMN_S_DESCRIPTION = "description";
     private static final String COLUMN_S_IMAGE_NAME = "image_name";
@@ -83,6 +84,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createQuestionsTable);
 
         String createSignsTable = "CREATE TABLE " + TABLE_SIGNS + " (" +
+                COLUMN_S_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_S_NAME + " TEXT, " +
                 COLUMN_S_DESCRIPTION + " TEXT, " +
                 COLUMN_S_IMAGE_NAME + " TEXT, " +

@@ -5,36 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".MainActivity">
 
     <!-- Header Toolbar -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/white"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/tvToolbarTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ôn thi giấy phép lái xe"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="?attr/colorOnPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#EEEEEE"
+        android:background="?android:attr/listDivider"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <ScrollView
@@ -54,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:text="Chọn loại phương tiện bạn muốn thi:"
-                android:textColor="#757575"
+                android:textColor="?android:attr/textColorSecondary"
                 android:textSize="14sp" />
 
             <!-- Nút chọn XE MÁY -->
@@ -68,7 +54,7 @@
                 android:paddingStart="24dp"
                 android:text="Ôn thi bằng XE MÁY"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="18sp"
                 app:cornerRadius="12dp"
                 app:icon="@android:drawable/ic_menu_directions"
@@ -87,7 +73,7 @@
                 android:paddingStart="24dp"
                 android:text="Ôn thi bằng Ô TÔ"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="18sp"
                 app:cornerRadius="12dp"
                 app:icon="@android:drawable/ic_menu_manage"

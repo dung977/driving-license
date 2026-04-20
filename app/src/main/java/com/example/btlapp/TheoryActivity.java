@@ -199,10 +199,11 @@ public class TheoryActivity extends AppCompatActivity {
             ivQuestionImage.setVisibility(View.GONE);
         }
 
-        rbOptionA.setTextColor(Color.BLACK);
-        rbOptionB.setTextColor(Color.BLACK);
-        rbOptionC.setTextColor(Color.BLACK);
-        rbOptionD.setTextColor(Color.BLACK);
+        int colorOnSurface = getThemeColor(com.google.android.material.R.attr.colorOnSurface);
+        rbOptionA.setTextColor(colorOnSurface);
+        rbOptionB.setTextColor(colorOnSurface);
+        rbOptionC.setTextColor(colorOnSurface);
+        rbOptionD.setTextColor(colorOnSurface);
 
         rbOptionA.setText("1. " + question.getOptionA());
         rbOptionB.setText("2. " + question.getOptionB());
@@ -240,6 +241,12 @@ public class TheoryActivity extends AppCompatActivity {
                 showResultAndExplanation();
             }
         });
+    }
+
+    private int getThemeColor(int attr) {
+        android.util.TypedValue typedValue = new android.util.TypedValue();
+        getTheme().resolveAttribute(attr, typedValue, true);
+        return typedValue.data;
     }
 
     private void showResultAndExplanation() {

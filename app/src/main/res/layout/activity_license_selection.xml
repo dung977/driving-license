@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/colorSurface"
     tools:context=".LicenseSelectionActivity">
 
     <!-- Header Toolbar -->
@@ -13,7 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/white"
+        android:background="?attr/colorSurface"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -25,14 +25,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/black" />
+            app:tint="?attr/colorOnSurface" />
 
         <TextView
             android:id="@+id/tvToolbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chọn hạng bằng lái"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +87,7 @@
                     android:paddingStart="24dp"
                     android:text="Hạng A1/A"
                     android:textAllCaps="false"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     app:cornerRadius="12dp"
                     app:icon="@drawable/ic_chevron_right"
@@ -105,7 +105,7 @@
                     android:paddingStart="24dp"
                     android:text="Hạng B1"
                     android:textAllCaps="false"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     app:cornerRadius="12dp"
                     app:icon="@drawable/ic_chevron_right"
@@ -134,7 +134,7 @@
                     android:paddingStart="24dp"
                     android:text="Hạng B"
                     android:textAllCaps="false"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     app:cornerRadius="12dp"
                     app:icon="@drawable/ic_chevron_right"
@@ -152,7 +152,7 @@
                     android:paddingStart="24dp"
                     android:text="Hạng C"
                     android:textAllCaps="false"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     app:cornerRadius="12dp"
                     app:icon="@drawable/ic_chevron_right"
@@ -170,7 +170,7 @@
                     android:paddingStart="24dp"
                     android:text="Hạng C1"
                     android:textAllCaps="false"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     app:cornerRadius="12dp"
                     app:icon="@drawable/ic_chevron_right"
